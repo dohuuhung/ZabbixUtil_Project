@@ -1,0 +1,41 @@
+# update_mode:
+# - 0(default): based on update function
+# - 1: like Maxigent, based on overwrite function. Delete old and then create new
+update_mode: 1
+
+items:
+  - name: CPU Load
+    key_: system.cpu.load
+    type: 7
+    delay: 56s                   # delay value is interval time of collecting data from target device
+    status: 1
+    value_type: 0                # 0: numeric float, 1: character, 2: log, 3: numeric unsigned, 4: text.
+  - name: Free Memory
+    key_: vm.memory.size[free]
+    type: 7
+    delay: 68s
+    status: 0
+    value_type: 0
+  - name: Disk Space
+    key_: vfs.fs.size[/,free]
+    type: 7
+    delay: 10m
+    status: 0
+    value_type: 0
+    
+events:
+  - description: Processor load is too high on {HOST.NAME}
+    event_name: CPU_ALL@check_cpu_usage
+    triggers:
+      - expression: avg(/{0}/system.cpu.load,3m)>89 and avg(/{0}/system.cpu.load,3m)<98
+        priority: 4                # 0: not classified, 1: information, 2: warning, 3: average, 4: high, 5: disaster
+        status: 0                  # Whether the trigger is enabled or disabled. 0: enabled, 1: disabled.
+        type: 0
+      - expression: avg(/{0}/system.cpu.load,3m)>48 and avg(/{0}/system.cpu.load,3m)<89
+        priority: 2
+        status: 0
+        type: 0
+#      - expression: avg(/{0}/system.cpu.load,3m)>89 and avg(/{0}/system.cpu.load,3m)<98
+#        priority: 5
+#        status: 0
+#        type: 0

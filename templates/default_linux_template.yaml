@@ -1,0 +1,51 @@
+template_name: default_linux_maxi_team_01
+
+#Possible values of monitoring_type:
+#0 - Zabbix agent;
+#2 - Zabbix trapper;
+#3 - Simple check;
+#5 - Zabbix internal;
+#7 - Zabbix agent (active) as same as Maxigent agent
+#9 - Web item;
+#10 - External check;
+#11 - Database monitor;
+#12 - IPMI agent;
+#13 - SSH agent;
+#14 - Telnet agent;
+#15 - Calculated;
+#16 - JMX agent;
+#17 - SNMP trap;
+#18 - Dependent item;
+#19 - HTTP agent;
+#20 - SNMP agent;
+#21 - Script
+monitoring_type: 7
+# If monitoring_type = 7, we don't need field "interfaceid" in configuration. In other case, we will need this field in config of "item".
+
+template_content:
+  items:
+    - name: CPU Load
+      key_: system.cpu.load
+      delay: 30s                   # delay value is interval time of collecting data from target device
+      value_type: 0                # 0: numeric float, 1: character, 2: log, 3: numeric unsigned, 4: text.
+    - name: Free Memory
+      key_: vm.memory.size[free]
+      delay: 1m
+      value_type: 0
+    - name: Disk Space
+      key_: vfs.fs.size[/,free]
+      delay: 2m
+      value_type: 0
+      
+  events:
+    - description: Processor load is too high on {HOST.NAME}
+      event_name: CPU_ALL@check_cpu_usage
+      triggers:
+        - expression: avg(/{0}/system.cpu.load,3m)>70
+          priority: 4                # 0: not classified, 1: information, 2: warning, 3: average, 4: high, 5: disaster
+          status: 0                  # Whether the trigger is enabled or disabled. 0: enabled, 1: disabled.
+          type: 0
+        - expression: avg(/{0}/system.cpu.load,3m)>40 and avg(/{0}/system.cpu.load,3m)<70
+          priority: 2
+          status: 0
+          type: 0

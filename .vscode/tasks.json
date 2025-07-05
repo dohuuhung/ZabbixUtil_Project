@@ -1,0 +1,60 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build main.cpp",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++11",
+                "-g",
+                "-Iinclude",
+                "main.cpp",
+                "logger.cpp",
+                "zabbix_util.cpp",
+                "lib/libyaml-cpp.a",
+                "lib/libfmt.a",
+                "lib/libcurl.a",
+                "lib/libbrotlicommon.a",
+                "lib/libbrotlidec.a",
+                "lib/libcrypto.a",
+                "lib/libcurl.dll.a",
+                "lib/libfmt.a",
+                "lib/libnghttp2.a",
+                "lib/libnghttp3.a",
+                "lib/libngtcp2.a",
+                "lib/libngtcp2_crypto_quictls.a",
+                "lib/libpsl.a",
+                "lib/libssh2.a",
+                "lib/libssl.a",
+                "lib/libyaml-cpp.a",
+                "lib/libz.a",
+                "lib/libzstd.a",
+                "-o",
+                "zabbix-util.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compile main.cpp using g++"
+        },
+        {
+            "label": "run main.exe",
+            "type": "shell",
+            "command": ".\\main.exe",
+            "dependsOn": "build main.cpp",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        }
+    ]
+}

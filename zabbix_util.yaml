@@ -1,0 +1,17 @@
+default_config:
+  default_host_group: global_group
+  log_file: zabbix_util.log
+
+zabbix_masters:
+  - zone_name: PSKRW1
+    host: 171.229.150.6
+    port: 3532
+    ssl: false
+    user: dh.hung
+    password: Zabbix.123#
+  - zone_name: MES01
+    host: 172.168.116.227
+    port: 80
+    ssl: false
+    user:
+    password:
