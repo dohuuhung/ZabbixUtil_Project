@@ -2,6 +2,7 @@
 #include "zabbix_util.h"
 #include <yaml-cpp/yaml.h>
 #include <fmt/core.h>
+//#include <fmt/format.h>
 #include <curl/curl.h>
 #include "json.hpp"
 #include <iostream>
@@ -11,11 +12,13 @@
 #include <string>
 #include <unordered_map>
 #include <vector>
+#include <chrono>
 
 using namespace std;
 using json = nlohmann::json;
 
 const int API_RETRY_TIME = 2;
+const string SUPPORT_ITEM_KEY_FILE = "config\\zabbix_supported_item_key.txt";
 typedef unordered_map<string, string> zinterface;
 
 typedef pair<string, string> Credentials;
@@ -48,6 +51,27 @@ const unordered_map<string, int> ZTRIGGER_VALUE_TYPE_MAP = {
 	{"type", 1}
 };
 
+const unordered_map<string, int> REGEX_EXPRESSION_VALUE_TYPE_MAP = {
+	// second component (int):
+	// 0: string type
+	// 1: none string type
+	{"name", 0},
+	{"test_string", 0},
+	{"expressions", 1},
+	{"expression", 0},
+	{"expression_type", 0},
+	{"case_sensitive", 0}
+};
+
+string getEpochTimeString() {
+    auto now = std::chrono::system_clock::now();
+    auto epoch_seconds = std::chrono::duration_cast<std::chrono::seconds>(
+        now.time_since_epoch()
+    ).count();
+
+    return to_string(epoch_seconds);
+}
+
 string makeKeyValueStr(string k, string v, int value_type) {
 	// value_type:
 	// 0: string type
@@ -67,17 +91,6 @@ unordered_map<string, string> parseJsonPair(const YAML::Node& jp) {
 	for (const auto& kv : jp) {
         string k = kv.first.as<std::string>();
         string v = kv.second.as<std::string>();
-        if (v == "null") continue;
-        result[k] = v;
-    }
-    return result;
-}
-
-unordered_map<string, string> getMapFromJson(const json& j) {
-    unordered_map<string, string> result;
-    for (auto kv = j.begin(); kv != j.end(); ++kv) {
-        string k = kv.key();
-        string v = kv.value().get<std::string>();
         if (v == "null") continue;
         result[k] = v;
     }
@@ -204,6 +217,9 @@ ZabbixTemplate parseZabbixTemplate(string template_file) {
 	        ZabbixItem zi = ZabbixItem(name);
             zi.item_conf = parseJsonPair(item);
             zi.item_conf.erase("name");
+			if (zi.item_conf.find("type") == zi.item_conf.end()) {
+				zi.item_conf["type"] = to_string(zt.monitoring_type);
+			}
 	        zt.zitems.push_back(zi);
 	    }
 	}
@@ -283,6 +299,22 @@ vector<ZabbixContext> parseZabbixUtilConf(string conf_file) {
 			ZabbixContext zc = ZabbixContext(zone_name, host, port, ssl, make_pair(user, password));
 			zc.update_mntr_cfg("default_host_group", default_host_group);
 			zc.common_cfg["log_file"] = log_file;
+
+			std::ifstream infile(SUPPORT_ITEM_KEY_FILE);
+            std::string line;
+			if (!infile) {
+				cerr << "Can not open file: " << SUPPORT_ITEM_KEY_FILE << endl;
+			} else {
+				while (getline(infile, line)) {
+					if (!line.empty()) {
+						if (zc.supported_item_key.find(line) == zc.supported_item_key.end()) {
+							line.erase(std::remove(line.begin(), line.end(), ' '), line.end());
+							zc.supported_item_key[line] = "1";
+						}
+					}
+				}
+			}
+
 			zcvector.push_back(zc);
 		}
 	} else {
@@ -515,15 +547,111 @@ ZabbixHost validateHost(ZabbixHost& zh, ZabbixContext& zcontext) {
 
 vector<ZabbixHost> validateHostList(vector<ZabbixHost>& zhv, ZabbixContext& zcontext) {
     vector<ZabbixHost> valid_zhv;
-    try {
-        for (ZabbixHost zh : zhv) {
+	vector<string> invalidHosts;
+	string host_name, ip;
+
+	for (ZabbixHost zh : zhv) {
+		try {
+		    host_name = zh.host_name;
+		    ip = zh.host_conf["ip"];
             ZabbixHost valid_zh = validateHost(zh, zcontext);
             valid_zhv.push_back(valid_zh);
+        } catch (const std::exception& e) {
+            invalidHosts.push_back(host_name + "|" + ip);
         }
-    } catch (const std::exception& e) {
-        throw;
-    }
+	}
+
+	if (!invalidHosts.empty()) {
+		string msg = "";
+		for (string invalidHost : invalidHosts) {
+			msg += "    " + invalidHost + "\n";
+		}
+		throw std::logic_error("Not found the following host:\n" + msg);
+	}
+
     return valid_zhv;
+}
+
+int validateItemList(vector<ZabbixItem>& ziv, ZabbixContext& zcontext) {
+    // return 0 if sucess, 1 if fail
+    string test_template_name = "zabbix_test_template_" + getEpochTimeString();
+    int template_id = createTemplate(test_template_name, zcontext);
+    if (template_id == -1) return 1;
+
+	vector<string> unsupportedKeyItems;
+	for (ZabbixItem zi : ziv) {
+		string key_str = zi.item_conf["key_"];
+		size_t pos = key_str.find('[');
+		if (pos != std::string::npos) {
+			key_str = key_str.substr(0, pos);
+		}
+		
+		if (zcontext.supported_item_key.find(key_str) == zcontext.supported_item_key.end()) {
+			unsupportedKeyItems.push_back(zi.name + "[" + zi.item_conf["key_"] + "]");
+		}
+	}
+	if (!unsupportedKeyItems.empty()) {
+		string msg = "";
+		for (auto unsuportKey : unsupportedKeyItems) {
+			msg += "    " + unsuportKey + "\n";
+		}
+		throw std::logic_error("The following items have unsupported key:\n" + msg + "Please check details for them");
+	}
+
+	vector<string> invalidObjects;
+    for (ZabbixItem zi : ziv) {
+		if (zi.item_conf.find("type") == zi.item_conf.end()) {
+			zi.item_conf["type"] = "7";
+		}
+        if (createItem(zi, template_id, stoi(zi.item_conf["type"]), zcontext) == -1) {
+			invalidObjects.push_back(zi.name + "[" + zi.item_conf["key_"] + "]");
+		}
+    }
+    
+	deleteTemplate(template_id, zcontext, test_template_name);
+
+	if (!invalidObjects.empty()) {
+		string msg = "";
+		for (auto invalidObj : invalidObjects) {
+			msg += "    " + invalidObj + "\n";
+		}
+		throw std::logic_error("The following items are not correct:\n" + msg + "Please check details for them");
+	}
+	return 0;
+}
+
+int validateEventList(vector<ZabbixItem>& valid_ziv, vector<ZabbixEvent>& zev, ZabbixContext& zcontext) {
+	// return 0 if sucess, 1 if fail
+	string test_template_name = "zabbix_test_template_" + getEpochTimeString();
+    int template_id = createTemplate(test_template_name, zcontext);
+    if (template_id == -1) return 1;
+
+	for (ZabbixItem zi : valid_ziv) {
+		if (zi.item_conf.find("type") == zi.item_conf.end()) {
+			zi.item_conf["type"] = "7";
+		}
+		createItem(zi, template_id, stoi(zi.item_conf["type"]), zcontext);
+    }
+
+	vector<string> invalidObjects;
+	for (ZabbixEvent ze : zev) {
+		ZabbixHost zh = ZabbixHost(test_template_name);
+		int create_result = createEvent(ze, zh, zcontext);
+		if (create_result != 0) {
+			invalidObjects.push_back(ze.event_name);
+		}
+	}
+
+	deleteTemplate(template_id, zcontext, test_template_name);
+
+	if (!invalidObjects.empty()) {
+		string msg = "";
+		for (auto invalidObj : invalidObjects) {
+			msg += "    " + invalidObj + "\n";
+		}
+		throw std::logic_error("The following events are not correct:\n" + msg + "Please check details for them");
+	}
+	return 0;
 }
 
 // API template.create
@@ -574,6 +702,35 @@ int createTemplate(string tempplate_name, ZabbixContext& zcontext) {
     }
 }
 
+int deleteTemplate(int template_id, ZabbixContext& zcontext, string template_name) {
+	// return template_id if success, -1 if fail;
+	string log_file = zcontext.common_cfg["log_file"];
+	
+	string jsonData = R"(
+	{{
+        "jsonrpc": "2.0",
+        "method": "template.delete",
+        "params": [
+            "{}"
+        ],
+        "auth": "{}",
+        "id": 1
+    }}
+	)";
+	jsonData = fmt::format(jsonData, template_id, zcontext.get_auth_token());
+	string response = callZabbixAPI(zcontext, jsonData);
+	json response_json = json::parse(response);
+    if (response_json.contains("result")) {
+        int template_id = stoi(response_json["result"]["templateids"][0].get<std::string>());
+        writeLog(log_file, "[zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=" + template_name + ", template_id=" + to_string(template_id) + "\n");
+        return template_id;
+    } else {
+    	writeLog(log_file, "[zabbix-util.cpp->deleteTemplate()] Delete template fail: template_name=" + template_name + "\n");
+        cerr << "Delete failed. Full response:\n" << response_json.dump(2) << endl;
+        return -1;
+    }
+}
+
 // API item.get get all item of a host determined by host_id
 vector<ZabbixItem> getAllItemOfHost(int host_id, ZabbixContext& zcontext) {
 	// return vector<ZabbixItem>
@@ -605,7 +762,6 @@ vector<ZabbixItem> getAllItemOfHost(int host_id, ZabbixContext& zcontext) {
     if (response_json.contains("result")) {
     	for (auto i : response_json["result"]) {
     		ZabbixItem zi = ZabbixItem(i["name"]);
-            // zi.item_conf = getMapFromJson(i);
     		zi.item_conf["itemid"] = i["itemid"];
     		zi.item_conf["type"] = i["type"];
     		zi.item_conf["key_"] = i["key_"];
@@ -894,11 +1050,10 @@ int deleteTrigger(string triggerid, ZabbixContext& zcontext) {
         	writeLog(log_file, "[zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=" + triggerid + "\n");
         	return 0;
 		}
-    } else {
-    	writeLog(log_file, "[zabbix-util.cpp->deleteTrigger()] Delete trigger fail: triggerid='" + triggerid + "'\n");
-        cerr << "Delete failed. Full response:\n" << response_json.dump(2) << endl;
-        return 1;
     }
+	writeLog(log_file, "[zabbix-util.cpp->deleteTrigger()] Delete trigger fail: triggerid='" + triggerid + "'\n");
+	cerr << "Delete failed. Full response:\n" << response_json.dump(2) << endl;
+	return 1;
 }
 
 int createEvent(ZabbixEvent ze, ZabbixHost zh, ZabbixContext& zcontext) {
@@ -986,7 +1141,7 @@ pair<int, pair<vector<ZabbixItem>, vector<ZabbixEvent>>> parseUpdateConf(string 
         throw;
     }
 	
-	int update_mode = 0;
+	int update_mode = 1;
 	if (root["update_mode"]) {
 		if (root["update_mode"].as<std::string>() != "null") {
 			update_mode = root["update_mode"].as<int>();
@@ -1100,4 +1255,65 @@ int update_mntr_conf(int update_mode, ZabbixHost zh, vector<ZabbixItem> update_z
     }
 	
 	return result;
+}
+
+ZabbixRegex::ZabbixRegex(string n) {
+    this->name = n;
+}
+
+// API regexp.create
+int createRegexp(ZabbixRegex zr, ZabbixContext& zcontext) {
+	// return int(regexpid) if delete successfully, return -1 if failed
+	string log_file = zcontext.common_cfg["log_file"];
+	string jsonData = R"(
+	{{
+		"jsonrpc": "2.0",
+		"method": "regexp.create",
+		"params": {{
+			"name": "{}"{}
+        }},
+		"auth": "{}",
+		"id": 1
+    }}
+	)";
+	string param_str = "";
+	if(!zr.test_string.empty()) {
+		param_str += "," + makeKeyValueStr("test_string", zr.test_string, REGEX_EXPRESSION_VALUE_TYPE_MAP.at("test_string"));
+	}
+	string expressions_str = "[";
+	int cnt = 0;
+	for (RegexExpression expression : zr.expressions) {
+		cnt++;
+		string expression_str = "{";
+		for (auto it = expression.begin(); it != expression.end(); it++) {
+			string k = it->first;
+			string v = it->second;
+			if (it == expression.begin()) {
+				expression_str += makeKeyValueStr(k, v, REGEX_EXPRESSION_VALUE_TYPE_MAP.at(k));
+				continue;
+			}
+			expression_str += "," + makeKeyValueStr(k, v, REGEX_EXPRESSION_VALUE_TYPE_MAP.at(k));
+		}
+		expression_str += "}";
+		if (cnt == zr.expressions.size()) {
+			expressions_str += expression_str;
+		} else {
+			expressions_str += expression_str + ",";
+		}
+	}
+	expressions_str += "]";
+	param_str += "," + makeKeyValueStr("expressions", expressions_str, REGEX_EXPRESSION_VALUE_TYPE_MAP.at("expressions"));
+
+	jsonData = fmt::format(jsonData, zr.name, param_str, zcontext.get_auth_token());
+	string response = callZabbixAPI(zcontext, jsonData);
+	json response_json = json::parse(response);
+    if (response_json.contains("result")) {
+        int regexpid = stoi(response_json["result"]["regexpids"][0].get<std::string>());
+		writeLog(log_file, "[zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=" + to_string(regexpid) + "\n");
+		return regexpid;
+    } else {
+    	writeLog(log_file, "[zabbix-util.cpp->createRegexp()] create regexp fail \n");
+        cerr << "Create failed. Full response:\n" << response_json.dump(2) << endl;
+        return -1;
+    }
 }

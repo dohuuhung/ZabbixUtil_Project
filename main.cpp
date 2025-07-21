@@ -1,6 +1,8 @@
 #include "logger.h"
 #include <fmt/core.h>
+//#include <fmt/format.h>
 #include "zabbix_util.h"
+#include "test.h"
 #include "CLI/CLI.hpp"
 #include <iostream>
 #include <stdexcept>
@@ -10,7 +12,7 @@
 #include <vector>
 using namespace std;
 
-string DEFAULT_CFG_FILE = "zabbix_util.yaml";
+string DEFAULT_CFG_FILE = "config\\zabbix_util.yaml";
 vector<ZabbixContext> zcvector;
 
 ZabbixContext findZC(vector<ZabbixContext>& zcv, string zone_name) {
@@ -24,55 +26,7 @@ void handle_test(string zone_name) {
 	ZabbixContext zc = findZC(zcvector, zone_name);
 	userLogin(zc);
 
-    cout << "Go here" << endl;
-    cout << "Auth token = " << zc.get_auth_token() << endl;
-
-    string host_list_file = "update_conf_yaml\\host_list.txt";
-    vector<ZabbixHost> vzh = parseHostList(host_list_file);
-    for (auto zh : vzh) {
-        cout << "hostname: " << zh.host_name;
-        cout << "    host_id: " << zh.host_id << "    ip: " << zh.host_conf.at("ip") << endl;
-        ZabbixHost zh2 = findHost(zh.host_name, zh.host_conf.at("ip"), zc);
-        vector<ZabbixItem> ziv = getAllItemOfHost(std::stoi(zh2.host_id), zc);
-        for (auto zi : ziv) {
-            cout << "    item: " << zi.name;
-            for (const auto& kv : zi.item_conf) {
-                string k = kv.first;
-                string v = kv.second;
-                if (v == "null") continue;
-                cout << "        " << k << ": " << v << endl;
-            }
-        }
-    }
-
-    ZabbixTemplate zt = parseZabbixTemplate("templates\\default_linux_template.yaml");
-    cout << "Template name: " << zt.template_name << endl;
-    cout << "Monitoring type: " << zt.monitoring_type << endl;
-    cout << "Template items:" << zt.zitems.size() << endl;
-    for (auto item : zt.zitems) {
-        cout << "Item name: " << item.name << endl;
-        for (auto kv : item.item_conf) {
-            string k = kv.first;
-            string v = kv.second;
-            if (v == "null") continue;
-            cout << "    " << k << ": " << v << endl;
-        }
-    }
-    for (auto event : zt.zevents) {
-        cout << "Event name: " << event.event_name << endl;
-        cout << "Event description: " << event.description << endl;
-        for (auto trigger : event.ztv) {
-            cout << "    Trigger description: " << trigger.description << endl;
-            for (auto kv : trigger.trigger_conf) {
-                string k = kv.first;
-                string v = kv.second;
-                if (v == "null") continue;
-                cout << "        " << k << ": " << v << endl;
-            }
-        }
-    }
-
-    // cout << "ID of template dh.hung_template_20250702 = " << createTemplate("dh.hung_template_20250702", zc) << endl;
+    test_regexp_api(zc);
 }
 
 void handle_create_template(const string& zone_name, const string& template_input) {
@@ -140,10 +94,11 @@ void handle_update_mntr_conf(string zone_name, const string& update_file,
     try {
         valid_zhv = validateHostList(zhv, zc);
     } catch (const std::exception& e) {
-        cerr << e.what() << endl << "Please check your host list again" << endl;;
+        cerr << e.what() << "Please check your host list again" << endl;
         return;
     }
-        
+    cout << "OK" << endl;
+
     pair<int, pair<vector<ZabbixItem>, vector<ZabbixEvent>>> puc;
     try {
         puc = parseUpdateConf(update_file);
@@ -157,8 +112,24 @@ void handle_update_mntr_conf(string zone_name, const string& update_file,
     vector<ZabbixEvent> update_zev = update_pair.second;
 
     // Validate update items
+    cout << "Validating updated items..." << endl;
+    try {
+        validateItemList(update_ziv, zc);
+    } catch (const std::exception& e) {
+        cerr << "Error validating update items." << endl << e.what() << endl;
+        return;
+    }
+    cout << "OK" << endl;
 
     // Validate update events
+    cout << "Validating updated events..." << endl;
+    try {
+        validateEventList(update_ziv, update_zev, zc);
+    } catch (const std::exception& e) {
+        cerr << "Error validating update events." << endl << e.what() << endl;
+        return;
+    }
+    cout << "OK" << endl;
 
     // Start update monitoring config
     cout << "Start update monitoring config for " << valid_zhv.size() << " hosts" << endl;

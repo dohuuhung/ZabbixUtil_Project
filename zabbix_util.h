@@ -13,12 +13,13 @@ using json = nlohmann::json;
 
 typedef pair<string, string> Credentials;
 typedef unordered_map<string, string> zinterface;
+typedef unordered_map<string, string> RegexExpression;
 
 extern const unordered_map<string, int> ZITEM_VALUE_TYPE_MAP;
 extern const unordered_map<string, int> ZTRIGGER_VALUE_TYPE_MAP;
 
 unordered_map<string, string> parseJsonPair(const YAML::Node& jp);
-unordered_map<string, string> getMapFromJson(const json& j);
+string getEpochTimeString();
 
 YAML::Node loadYamlFile(const string& file_path);
 
@@ -34,6 +35,7 @@ class ZabbixContext{
 	
 	public:
 		unordered_map<string, string> common_cfg;
+		unordered_map<string, string> supported_item_key;
 		
 		ZabbixContext(string zn);
 		ZabbixContext(string zn, string h, int p, bool s, Credentials c);
@@ -111,6 +113,9 @@ int update_mntr_conf(int update_mode, ZabbixHost zh, vector<ZabbixItem> update_z
 vector<ZabbixHost> validateHostList(vector<ZabbixHost>& zhv, ZabbixContext& zcontext);
 ZabbixHost validateHost(ZabbixHost& zh, ZabbixContext& zcontext);
 
+int validateItemList(vector<ZabbixItem>& ziv, ZabbixContext& zcontext);
+int validateEventList(vector<ZabbixItem>& valid_ziv, vector<ZabbixEvent>& zev, ZabbixContext& zcontext);
+
 string callZabbixAPI(ZabbixContext& zcontext, string jsonData);
 void check_default_mntr_cfg(ZabbixContext& zcontext);
 string makeKeyValueStr(string k, string v, int value_type);
@@ -130,6 +135,9 @@ ZabbixHost findHost(string host_name, string ip_addr, ZabbixContext& zcontext);
 
 // API template.create
 int createTemplate(string tempplate_name, ZabbixContext& zcontext);
+
+// API template.delete
+int deleteTemplate(int template_id, ZabbixContext& zcontext, string template_name="");
 
 // API item.get get all item of a host determined by host_id
 vector<ZabbixItem> getAllItemOfHost(int host_id, ZabbixContext& zcontext);
@@ -152,5 +160,18 @@ int disableTrigger(string triggerid, ZabbixContext& zcontext);
 
 // API trigger.delete
 int deleteTrigger(string triggerid, ZabbixContext& zcontext);
+
+class ZabbixRegex{
+    public:
+	    string name;
+		string regexpid;
+		string test_string;
+		vector<RegexExpression> expressions;
+
+		ZabbixRegex(string n);
+};
+
+// API regexp.create
+int createRegexp(ZabbixRegex zr, ZabbixContext& zcontext);
 
 #endif

@@ -1,0 +1,9 @@
+regexps:
+  - name: zabbix_util_test_regex
+    expressions:
+      - expression: "Physical memory|Virtual memory|Memory buffers|Cached memory|Swap space"
+        expression_type: 3
+        case_sensitive: 1
+      - expression: "[E|e][R|r][R|r][O|o][R|r]"
+        expression_type: 3
+        case_sensitive: 1

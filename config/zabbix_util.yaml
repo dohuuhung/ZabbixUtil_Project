@@ -4,7 +4,7 @@ default_config:
 
 zabbix_masters:
   - zone_name: PSKRW1
-    host: 171.229.150.6
+    host: 171.245.58.139
     port: 3532
     ssl: false
     user: dh.hung

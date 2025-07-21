@@ -436,3 +436,601 @@
 [2025-07-05 12:00:32] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24406
 [2025-07-05 12:00:32] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24407
 [2025-07-05 12:00:32] Create event: CPU_ALL@check_cpu_usage successfully
+[2025-07-05 14:37:11] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-05 14:37:11] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-05 14:37:11] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-07-05 14:37:11] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-07-05 14:37:11] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-07-05 14:37:11] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-07-05 14:37:11] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-07-05 14:37:11] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-07-05 14:37:11] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1751701031, template_id=10671
+[2025-07-05 14:37:12] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=49428
+[2025-07-05 14:37:12] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=49429
+[2025-07-05 14:37:12] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=49430
+[2025-07-05 14:37:12] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1751701031, template_id=10671
+[2025-07-05 14:37:12] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10670 successfully. Number of item is: 3
+[2025-07-05 14:37:12] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10670 successfully. Number of trigger is: 2
+[2025-07-05 14:37:12] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=49431
+[2025-07-05 14:37:12] Create item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=CPU Load
+[2025-07-05 14:37:12] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49420
+[2025-07-05 14:37:12] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Free Memory
+[2025-07-05 14:37:12] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49421
+[2025-07-05 14:37:12] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Disk Space
+[2025-07-05 14:37:12] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24400
+[2025-07-05 14:37:12] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24401
+[2025-07-05 14:37:12] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24408
+[2025-07-05 14:37:12] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24409
+[2025-07-05 14:37:12] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10657 successfully. Number of item is: 3
+[2025-07-05 14:37:12] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10657 successfully. Number of trigger is: 2
+[2025-07-05 14:37:12] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=49432
+[2025-07-05 14:37:12] Create item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=CPU Load
+[2025-07-05 14:37:12] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49423
+[2025-07-05 14:37:12] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=Free Memory
+[2025-07-05 14:37:12] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49424
+[2025-07-05 14:37:12] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=Disk Space
+[2025-07-05 14:37:13] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24402
+[2025-07-05 14:37:13] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24403
+[2025-07-05 14:37:13] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24410
+[2025-07-05 14:37:13] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24411
+[2025-07-05 14:37:13] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10658 successfully. Number of item is: 3
+[2025-07-05 14:37:13] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10658 successfully. Number of trigger is: 2
+[2025-07-05 14:37:13] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=49433
+[2025-07-05 14:37:13] Create item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=CPU Load
+[2025-07-05 14:37:13] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=48378
+[2025-07-05 14:37:13] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=Free Memory
+[2025-07-05 14:37:13] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=48379
+[2025-07-05 14:37:13] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=Disk Space
+[2025-07-05 14:37:13] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24404
+[2025-07-05 14:37:13] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24405
+[2025-07-05 14:37:13] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24412
+[2025-07-05 14:37:13] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24413
+[2025-07-05 14:37:13] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10629 successfully. Number of item is: 3
+[2025-07-05 14:37:13] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10629 successfully. Number of trigger is: 2
+[2025-07-05 14:37:13] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=49434
+[2025-07-05 14:37:13] Create item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=CPU Load
+[2025-07-05 14:37:13] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49426
+[2025-07-05 14:37:13] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=Free Memory
+[2025-07-05 14:37:13] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49427
+[2025-07-05 14:37:13] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=Disk Space
+[2025-07-05 14:37:14] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24406
+[2025-07-05 14:37:14] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24407
+[2025-07-05 14:37:14] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24414
+[2025-07-05 14:37:14] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24415
+[2025-07-05 14:39:40] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-05 14:39:40] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-05 14:39:40] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-07-05 14:39:40] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-07-05 14:39:40] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-07-05 14:39:40] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-07-05 14:39:40] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-07-05 14:39:40] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-07-05 14:39:40] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1751701180, template_id=10672
+[2025-07-05 14:39:40] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=49435
+[2025-07-05 14:39:40] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=49436
+[2025-07-05 14:39:40] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=49437
+[2025-07-05 14:39:40] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10670 successfully. Number of item is: 4
+[2025-07-05 14:39:40] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10670 successfully. Number of trigger is: 2
+[2025-07-05 14:39:40] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49431
+[2025-07-05 14:39:40] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=CPU Load
+[2025-07-05 14:39:40] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49420
+[2025-07-05 14:39:40] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Free Memory
+[2025-07-05 14:39:40] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49421
+[2025-07-05 14:39:40] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Disk Space
+[2025-07-05 14:39:40] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24408
+[2025-07-05 14:39:40] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24409
+[2025-07-05 14:39:40] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24416
+[2025-07-05 14:39:40] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24417
+[2025-07-05 14:39:41] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10657 successfully. Number of item is: 4
+[2025-07-05 14:39:41] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10657 successfully. Number of trigger is: 2
+[2025-07-05 14:39:41] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49432
+[2025-07-05 14:39:41] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=CPU Load
+[2025-07-05 14:39:41] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49423
+[2025-07-05 14:39:41] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=Free Memory
+[2025-07-05 14:39:41] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49424
+[2025-07-05 14:39:41] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=Disk Space
+[2025-07-05 14:39:41] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24410
+[2025-07-05 14:39:41] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24411
+[2025-07-05 14:39:41] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24418
+[2025-07-05 14:39:41] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24419
+[2025-07-05 14:39:41] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10658 successfully. Number of item is: 4
+[2025-07-05 14:39:41] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10658 successfully. Number of trigger is: 2
+[2025-07-05 14:39:41] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49433
+[2025-07-05 14:39:41] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=CPU Load
+[2025-07-05 14:39:41] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=48378
+[2025-07-05 14:39:41] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=Free Memory
+[2025-07-05 14:39:41] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=48379
+[2025-07-05 14:39:41] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=Disk Space
+[2025-07-05 14:39:41] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24412
+[2025-07-05 14:39:41] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24413
+[2025-07-05 14:39:41] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24420
+[2025-07-05 14:39:41] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24421
+[2025-07-05 14:39:41] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10629 successfully. Number of item is: 4
+[2025-07-05 14:39:42] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10629 successfully. Number of trigger is: 2
+[2025-07-05 14:39:42] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49434
+[2025-07-05 14:39:42] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=CPU Load
+[2025-07-05 14:39:42] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49426
+[2025-07-05 14:39:42] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=Free Memory
+[2025-07-05 14:39:42] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49427
+[2025-07-05 14:39:42] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=Disk Space
+[2025-07-05 14:39:42] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24414
+[2025-07-05 14:39:42] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24415
+[2025-07-05 14:39:42] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24422
+[2025-07-05 14:39:42] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24423
+[2025-07-05 14:48:11] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-05 14:48:11] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-05 14:48:11] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-07-05 14:48:11] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-07-05 14:48:11] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-07-05 14:48:11] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-07-05 14:48:11] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-07-05 14:48:11] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-07-05 14:48:12] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1751701691, template_id=10673
+[2025-07-05 14:48:12] [zabbix-util.cpp->createItem()] Create template fail: item_name=CPU Load
+[2025-07-05 14:48:12] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=49438
+[2025-07-05 14:48:12] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=49439
+[2025-07-05 15:19:38] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-05 15:19:38] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-05 15:19:38] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-07-05 15:19:38] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-07-05 15:19:38] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-07-05 15:19:38] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-07-05 15:19:38] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-07-05 15:19:38] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-07-05 15:19:38] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1751703578, template_id=10674
+[2025-07-05 15:31:08] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-05 15:31:08] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-05 15:31:08] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-07-05 15:31:08] [zabbix-util.cpp->findHost()] Can not find any host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.122
+[2025-07-05 15:35:19] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-05 15:35:19] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-05 15:35:19] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-07-05 15:35:19] [zabbix-util.cpp->findHost()] Can not find any host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.122
+[2025-07-05 15:35:19] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-07-05 15:35:19] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-07-05 15:35:19] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-07-05 15:35:19] [zabbix-util.cpp->findHost()] Can not find any host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.11
+[2025-07-08 17:53:37] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=default_linux_maxi_team_01, template_id=10676
+[2025-07-08 17:53:37] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=49895
+[2025-07-08 17:53:37] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=49896
+[2025-07-08 17:53:38] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=49897
+[2025-07-08 17:53:38] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24592
+[2025-07-08 17:53:38] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24593
+[2025-07-08 18:14:54] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-08 18:14:54] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-08 18:14:54] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-07-08 18:14:54] [zabbix-util.cpp->findHost()] Can not find any host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.122
+[2025-07-08 18:14:55] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-07-08 18:14:55] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-07-08 18:14:55] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-07-08 18:14:55] [zabbix-util.cpp->findHost()] Can not find any host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.11
+[2025-07-08 18:15:28] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-08 18:15:28] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-08 18:15:28] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-07-08 18:15:28] [zabbix-util.cpp->findHost()] Can not find any host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.122
+[2025-07-08 18:15:29] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-07-08 18:15:29] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-07-08 18:15:29] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-07-08 18:15:29] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-07-08 18:15:40] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-08 18:15:40] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-08 18:15:40] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-07-08 18:15:40] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-07-08 18:15:40] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-07-08 18:15:40] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-07-08 18:15:40] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-07-08 18:15:40] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-07-08 18:15:41] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1751973340, template_id=10677
+[2025-07-08 18:16:36] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-08 18:16:36] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-08 18:16:36] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-07-08 18:16:36] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-07-08 18:16:36] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-07-08 18:16:36] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-07-08 18:16:37] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-07-08 18:16:37] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-07-08 18:16:37] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1751973397, template_id=10678
+[2025-07-08 18:23:52] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-08 18:23:52] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-08 18:23:52] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-07-08 18:23:52] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-07-08 18:23:52] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-07-08 18:23:52] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-07-08 18:23:53] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-07-08 18:23:53] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-07-08 18:23:53] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1751973833, template_id=10679
+[2025-07-08 18:24:59] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-08 18:24:59] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-08 18:24:59] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-07-08 18:24:59] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-07-08 18:24:59] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-07-08 18:24:59] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-07-08 18:24:59] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-07-08 18:24:59] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-07-08 18:25:01] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1751973899, template_id=10680
+[2025-07-08 18:26:43] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-08 18:26:43] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-08 18:26:43] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-07-08 18:26:43] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-07-08 18:26:43] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-07-08 18:26:43] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-07-08 18:26:43] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-07-08 18:26:43] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-07-08 18:26:43] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1751974003, template_id=10681
+[2025-07-08 18:33:47] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-08 18:33:47] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-08 18:33:47] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-07-08 18:33:47] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-07-08 18:33:47] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-07-08 18:33:47] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-07-08 18:33:47] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-07-08 18:33:47] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-07-08 18:33:48] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1751974427, template_id=10682
+[2025-07-08 18:33:48] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=49898
+[2025-07-08 18:33:48] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=49899
+[2025-07-08 18:33:48] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=49900
+[2025-07-08 18:33:49] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1751974427, template_id=10682
+[2025-07-08 18:33:49] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10670 successfully. Number of item is: 4
+[2025-07-08 18:33:49] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10670 successfully. Number of trigger is: 2
+[2025-07-08 18:33:49] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49419
+[2025-07-08 18:33:49] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=CPU Load
+[2025-07-08 18:33:49] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49420
+[2025-07-08 18:33:49] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Free Memory
+[2025-07-08 18:33:50] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49421
+[2025-07-08 18:33:50] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Disk Space
+[2025-07-08 18:33:50] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24416
+[2025-07-08 18:33:50] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24417
+[2025-07-08 18:33:50] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24594
+[2025-07-08 18:33:50] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24595
+[2025-07-08 18:33:51] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10657 successfully. Number of item is: 4
+[2025-07-08 18:33:51] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10657 successfully. Number of trigger is: 2
+[2025-07-08 18:33:51] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49422
+[2025-07-08 18:33:51] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=CPU Load
+[2025-07-08 18:33:51] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49423
+[2025-07-08 18:33:51] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=Free Memory
+[2025-07-08 18:33:51] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49424
+[2025-07-08 18:33:51] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=Disk Space
+[2025-07-08 18:33:51] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24418
+[2025-07-08 18:33:52] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24419
+[2025-07-08 18:33:52] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24596
+[2025-07-08 18:33:52] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24597
+[2025-07-08 18:33:52] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10658 successfully. Number of item is: 4
+[2025-07-08 18:33:52] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10658 successfully. Number of trigger is: 2
+[2025-07-08 18:33:53] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=48377
+[2025-07-08 18:33:53] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=CPU Load
+[2025-07-08 18:33:53] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=48378
+[2025-07-08 18:33:53] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=Free Memory
+[2025-07-08 18:33:53] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=48379
+[2025-07-08 18:33:53] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=Disk Space
+[2025-07-08 18:33:53] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24420
+[2025-07-08 18:33:54] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24421
+[2025-07-08 18:33:54] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24598
+[2025-07-08 18:33:54] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24599
+[2025-07-08 18:33:54] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10629 successfully. Number of item is: 4
+[2025-07-08 18:33:54] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10629 successfully. Number of trigger is: 2
+[2025-07-08 18:33:54] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49425
+[2025-07-08 18:33:54] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=CPU Load
+[2025-07-08 18:33:54] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49426
+[2025-07-08 18:33:54] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=Free Memory
+[2025-07-08 18:33:55] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49427
+[2025-07-08 18:33:55] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=Disk Space
+[2025-07-08 18:33:55] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24422
+[2025-07-08 18:33:55] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24423
+[2025-07-08 18:33:55] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24600
+[2025-07-08 18:33:55] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24601
+[2025-07-10 15:11:44] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=default_linux_maxi_team_01, template_id=10685
+[2025-07-10 15:11:44] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=50190
+[2025-07-10 15:11:44] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=50191
+[2025-07-10 15:11:44] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=50192
+[2025-07-10 15:11:45] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24726
+[2025-07-10 15:11:45] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24727
+[2025-07-10 15:13:23] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-10 15:13:23] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-10 15:13:23] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1752135203, template_id=10686
+[2025-07-10 15:13:23] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=50193
+[2025-07-10 15:13:23] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=50194
+[2025-07-10 15:13:24] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=50195
+[2025-07-10 15:13:24] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1752135203, template_id=10686
+[2025-07-10 15:13:24] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10670 successfully. Number of item is: 4
+[2025-07-10 15:13:24] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10670 successfully. Number of trigger is: 0
+[2025-07-10 15:13:25] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49419
+[2025-07-10 15:13:25] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=CPU Load
+[2025-07-10 15:13:25] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49420
+[2025-07-10 15:13:25] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Free Memory
+[2025-07-10 15:13:25] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49421
+[2025-07-10 15:13:25] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Disk Space
+[2025-07-10 15:13:25] Start create event: CPU_ALL@check_cpu_usage
+[2025-07-10 15:13:25] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24728
+[2025-07-10 15:13:25] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24729
+[2025-07-10 15:13:25] Create event: CPU_ALL@check_cpu_usage successfully
+[2025-07-10 15:16:25] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-10 15:16:25] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-10 15:16:26] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1752135385, template_id=10687
+[2025-07-10 15:16:26] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=50196
+[2025-07-10 15:16:26] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=50197
+[2025-07-10 15:16:26] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=50198
+[2025-07-10 15:16:27] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1752135385, template_id=10687
+[2025-07-10 15:16:27] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10670 successfully. Number of item is: 3
+[2025-07-10 15:16:27] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10670 successfully. Number of trigger is: 2
+[2025-07-10 15:16:27] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49419
+[2025-07-10 15:16:27] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=CPU Load
+[2025-07-10 15:16:28] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49420
+[2025-07-10 15:16:28] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Free Memory
+[2025-07-10 15:16:28] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=50199
+[2025-07-10 15:16:28] Create item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Disk Space
+[2025-07-10 15:16:28] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24728
+[2025-07-10 15:16:28] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24729
+[2025-07-10 15:16:28] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24730
+[2025-07-10 15:16:29] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24731
+[2025-07-10 15:18:12] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-10 15:18:12] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-10 15:18:12] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1752135492, template_id=10688
+[2025-07-10 15:18:12] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=50200
+[2025-07-10 15:18:13] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=50201
+[2025-07-10 15:18:13] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=50202
+[2025-07-10 15:18:13] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1752135492, template_id=10688
+[2025-07-10 15:18:13] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10670 successfully. Number of item is: 4
+[2025-07-10 15:18:13] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10670 successfully. Number of trigger is: 2
+[2025-07-10 15:18:13] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49419
+[2025-07-10 15:18:13] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=CPU Load
+[2025-07-10 15:18:13] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49420
+[2025-07-10 15:18:13] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Free Memory
+[2025-07-10 15:18:14] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=50199
+[2025-07-10 15:18:14] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Disk Space
+[2025-07-10 15:18:14] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24730
+[2025-07-10 15:18:14] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24731
+[2025-07-10 15:18:14] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24732
+[2025-07-10 15:18:15] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24733
+[2025-07-10 15:18:15] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24734
+[2025-07-10 15:19:48] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-10 15:19:48] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-10 15:19:49] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1752135588, template_id=10689
+[2025-07-10 15:19:49] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=50203
+[2025-07-10 15:19:49] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=50204
+[2025-07-10 15:19:49] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=50205
+[2025-07-10 15:19:49] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1752135588, template_id=10689
+[2025-07-10 15:19:50] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10670 successfully. Number of item is: 4
+[2025-07-10 15:19:50] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10670 successfully. Number of trigger is: 2
+[2025-07-10 15:19:50] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49419
+[2025-07-10 15:19:50] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=CPU Load
+[2025-07-10 15:19:50] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49420
+[2025-07-10 15:19:50] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Free Memory
+[2025-07-10 15:19:50] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=50199
+[2025-07-10 15:19:50] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Disk Space
+[2025-07-10 15:19:51] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24732
+[2025-07-10 15:19:51] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24733
+[2025-07-10 15:19:51] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24735
+[2025-07-10 15:19:51] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24736
+[2025-07-10 15:19:51] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-10 15:20:39] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-10 15:20:39] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-10 15:20:40] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1752135639, template_id=10690
+[2025-07-10 15:20:40] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=50206
+[2025-07-10 15:20:40] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=50207
+[2025-07-10 15:20:40] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=50208
+[2025-07-10 15:20:40] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1752135639, template_id=10690
+[2025-07-10 15:20:40] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10670 successfully. Number of item is: 4
+[2025-07-10 15:20:40] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10670 successfully. Number of trigger is: 2
+[2025-07-10 15:20:41] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49419
+[2025-07-10 15:20:41] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=CPU Load
+[2025-07-10 15:20:41] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49420
+[2025-07-10 15:20:41] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Free Memory
+[2025-07-10 15:20:41] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=50199
+[2025-07-10 15:20:41] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Disk Space
+[2025-07-10 15:20:41] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24735
+[2025-07-10 15:20:41] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24736
+[2025-07-10 15:20:42] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24737
+[2025-07-10 15:20:42] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=24738
+[2025-07-10 15:20:42] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-10 15:56:56] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-10 15:56:56] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-10 15:56:56] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1752137816, template_id=10692
+[2025-07-10 15:56:57] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=50264
+[2025-07-10 15:56:57] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=50265
+[2025-07-10 15:56:57] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=50266
+[2025-07-10 15:56:57] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1752137816, template_id=10692
+[2025-07-10 15:56:58] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1752137817, template_id=10693
+[2025-07-10 15:56:58] Start create event: CPU_ALL@check_cpu_usage
+[2025-07-10 15:56:58] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-10 15:56:58] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-10 15:56:58] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-10 15:56:58] Create event: CPU_ALL@check_cpu_usage failed
+[2025-07-10 15:56:59] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1752137817, template_id=10693
+[2025-07-10 15:57:43] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-10 15:57:43] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-10 15:57:43] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1752137863, template_id=10694
+[2025-07-10 15:57:43] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=50267
+[2025-07-10 15:57:43] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=50268
+[2025-07-10 15:57:43] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=50269
+[2025-07-10 15:57:44] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1752137863, template_id=10694
+[2025-07-10 15:57:44] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1752137864, template_id=10695
+[2025-07-10 15:57:44] Start create event: CPU_ALL@check_cpu_usage
+[2025-07-10 15:57:44] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-10 15:57:44] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-10 15:57:44] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-10 15:57:44] Create event: CPU_ALL@check_cpu_usage failed
+[2025-07-10 15:57:44] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1752137864, template_id=10695
+[2025-07-10 16:03:21] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-10 16:03:21] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-10 16:03:22] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1752138201, template_id=10696
+[2025-07-10 16:03:22] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=50505
+[2025-07-10 16:03:22] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=50506
+[2025-07-10 16:03:22] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=50507
+[2025-07-10 16:03:22] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1752138201, template_id=10696
+[2025-07-10 16:03:23] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1752138202, template_id=10697
+[2025-07-10 16:03:23] Start create event: CPU_ALL@check_cpu_usage
+[2025-07-10 16:03:23] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-10 16:03:23] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-10 16:03:23] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-10 16:03:23] Create event: CPU_ALL@check_cpu_usage failed
+[2025-07-10 16:03:23] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1752138202, template_id=10697
+[2025-07-15 16:57:30] [zabbix-util.cpp->createRegexp()] create regexp fail 
+[2025-07-15 16:59:36] [zabbix-util.cpp->createRegexp()] create regexp fail 
+[2025-07-15 17:05:14] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=7
+[2025-07-15 17:06:13] [zabbix-util.cpp->createRegexp()] create regexp fail 
+[2025-07-15 17:07:15] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=8
+[2025-07-21 14:38:55] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=default_linux_maxi_team_02, template_id=10707
+[2025-07-21 14:38:55] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=52200
+[2025-07-21 14:38:55] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=52201
+[2025-07-21 14:38:55] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=52202
+[2025-07-21 14:38:55] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25248
+[2025-07-21 14:38:56] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25249
+[2025-07-21 14:40:57] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-21 14:40:57] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-21 14:40:57] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753083657, template_id=10708
+[2025-07-21 14:40:58] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=52203
+[2025-07-21 14:40:58] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=52204
+[2025-07-21 14:40:58] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=52205
+[2025-07-21 14:40:58] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753083657, template_id=10708
+[2025-07-21 14:40:58] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753083658, template_id=10709
+[2025-07-21 14:40:58] Start create event: CPU_ALL@check_cpu_usage
+[2025-07-21 14:40:59] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-21 14:40:59] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-21 14:40:59] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-21 14:40:59] Create event: CPU_ALL@check_cpu_usage failed
+[2025-07-21 14:40:59] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753083658, template_id=10709
+[2025-07-21 14:41:56] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-21 14:41:56] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-21 14:41:56] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753083716, template_id=10710
+[2025-07-21 14:41:56] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=52206
+[2025-07-21 14:41:56] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=52207
+[2025-07-21 14:41:56] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=52208
+[2025-07-21 14:41:57] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753083716, template_id=10710
+[2025-07-21 14:41:57] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753083717, template_id=10711
+[2025-07-21 14:41:57] Start create event: CPU_ALL@check_cpu_usage
+[2025-07-21 14:41:57] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-21 14:41:57] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-21 14:41:57] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-21 14:41:57] Create event: CPU_ALL@check_cpu_usage failed
+[2025-07-21 14:41:58] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753083717, template_id=10711
+[2025-07-21 14:43:21] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-21 14:43:21] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-21 14:43:21] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753083801, template_id=10712
+[2025-07-21 14:43:21] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=52209
+[2025-07-21 14:43:21] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=52210
+[2025-07-21 14:43:22] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=52211
+[2025-07-21 14:43:22] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753083801, template_id=10712
+[2025-07-21 14:43:22] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753083802, template_id=10713
+[2025-07-21 14:43:22] Start create event: CPU_ALL@check_cpu_usage
+[2025-07-21 14:43:22] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-21 14:43:22] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-21 14:43:22] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-21 14:43:22] Create event: CPU_ALL@check_cpu_usage failed
+[2025-07-21 14:43:23] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753083802, template_id=10713
+[2025-07-21 14:48:59] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-21 14:48:59] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-21 14:48:59] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753084139, template_id=10714
+[2025-07-21 14:48:59] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=52212
+[2025-07-21 14:48:59] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=52213
+[2025-07-21 14:48:59] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=52214
+[2025-07-21 14:49:00] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753084139, template_id=10714
+[2025-07-21 14:49:00] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753084140, template_id=10715
+[2025-07-21 14:49:00] Start create event: CPU_ALL@check_cpu_usage
+[2025-07-21 14:49:00] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-21 14:49:00] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-21 14:49:00] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-21 14:49:00] Create event: CPU_ALL@check_cpu_usage failed
+[2025-07-21 14:49:00] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753084140, template_id=10715
+[2025-07-21 14:50:26] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-21 14:50:26] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-21 14:50:26] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753084226, template_id=10716
+[2025-07-21 14:50:26] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=52215
+[2025-07-21 14:50:27] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=52216
+[2025-07-21 14:50:27] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=52217
+[2025-07-21 14:50:27] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753084226, template_id=10716
+[2025-07-21 14:50:27] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753084227, template_id=10717
+[2025-07-21 14:50:27] Start create event: CPU_ALL@check_cpu_usage
+[2025-07-21 14:50:27] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-21 14:50:28] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-21 14:50:28] Create event: CPU_ALL@check_cpu_usage failed
+[2025-07-21 14:50:28] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753084227, template_id=10717
+[2025-07-21 15:17:07] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-21 15:17:07] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-21 15:17:07] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753085827, template_id=10718
+[2025-07-21 15:17:08] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=52218
+[2025-07-21 15:17:08] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=52219
+[2025-07-21 15:17:08] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=52220
+[2025-07-21 15:17:08] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753085827, template_id=10718
+[2025-07-21 15:17:08] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753085828, template_id=10719
+[2025-07-21 15:17:08] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=52221
+[2025-07-21 15:17:09] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=52222
+[2025-07-21 15:17:09] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=52223
+[2025-07-21 15:17:09] Start create event: CPU_ALL@check_cpu_usage
+[2025-07-21 15:17:09] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25250
+[2025-07-21 15:17:09] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25251
+[2025-07-21 15:17:09] Create event: CPU_ALL@check_cpu_usage successfully
+[2025-07-21 15:17:09] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753085828, template_id=10719
+[2025-07-21 15:17:10] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10670 successfully. Number of item is: 4
+[2025-07-21 15:17:10] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10670 successfully. Number of trigger is: 2
+[2025-07-21 15:17:10] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49419
+[2025-07-21 15:17:10] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=CPU Load
+[2025-07-21 15:17:10] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49420
+[2025-07-21 15:17:10] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Free Memory
+[2025-07-21 15:17:10] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=50199
+[2025-07-21 15:17:10] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Disk Space
+[2025-07-21 15:17:11] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24737
+[2025-07-21 15:17:11] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=24738
+[2025-07-21 15:17:11] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25252
+[2025-07-21 15:17:11] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25253
+[2025-07-21 15:17:36] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-21 15:17:36] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-21 15:17:36] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753085856, template_id=10720
+[2025-07-21 15:17:36] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=52224
+[2025-07-21 15:17:37] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=52225
+[2025-07-21 15:17:37] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=52226
+[2025-07-21 15:17:37] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753085856, template_id=10720
+[2025-07-21 15:17:37] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753085857, template_id=10721
+[2025-07-21 15:17:38] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=52227
+[2025-07-21 15:17:38] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=52228
+[2025-07-21 15:17:38] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=52229
+[2025-07-21 15:17:38] Start create event: CPU_ALL@check_cpu_usage
+[2025-07-21 15:17:38] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25254
+[2025-07-21 15:17:38] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25255
+[2025-07-21 15:17:38] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25256
+[2025-07-21 15:17:38] Create event: CPU_ALL@check_cpu_usage successfully
+[2025-07-21 15:17:39] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753085857, template_id=10721
+[2025-07-21 15:17:39] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10670 successfully. Number of item is: 4
+[2025-07-21 15:17:39] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10670 successfully. Number of trigger is: 2
+[2025-07-21 15:17:39] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49419
+[2025-07-21 15:17:39] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=CPU Load
+[2025-07-21 15:17:39] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49420
+[2025-07-21 15:17:39] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Free Memory
+[2025-07-21 15:17:39] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=50199
+[2025-07-21 15:17:39] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Disk Space
+[2025-07-21 15:17:39] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25252
+[2025-07-21 15:17:40] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25253
+[2025-07-21 15:17:40] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25257
+[2025-07-21 15:17:40] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25258
+[2025-07-21 15:17:40] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25259
+[2025-07-21 15:18:23] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-21 15:18:23] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-21 15:18:24] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753085903, template_id=10722
+[2025-07-21 15:18:24] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=52230
+[2025-07-21 15:18:24] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=52231
+[2025-07-21 15:18:24] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=52232
+[2025-07-21 15:18:25] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753085903, template_id=10722
+[2025-07-21 15:18:25] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753085905, template_id=10723
+[2025-07-21 15:18:25] [zabbix-util.cpp->createItem()] Create item successfully: item_name=CPU Load, item_id=52233
+[2025-07-21 15:18:25] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Free Memory, item_id=52234
+[2025-07-21 15:18:25] [zabbix-util.cpp->createItem()] Create item successfully: item_name=Disk Space, item_id=52235
+[2025-07-21 15:18:25] Start create event: CPU_ALL@check_cpu_usage
+[2025-07-21 15:18:26] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25260
+[2025-07-21 15:18:26] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25261
+[2025-07-21 15:18:26] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25262
+[2025-07-21 15:18:26] Create event: CPU_ALL@check_cpu_usage successfully
+[2025-07-21 15:18:26] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753085905, template_id=10723
+[2025-07-21 15:18:26] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10670 successfully. Number of item is: 4
+[2025-07-21 15:18:26] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10670 successfully. Number of trigger is: 3
+[2025-07-21 15:18:26] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49419
+[2025-07-21 15:18:27] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=CPU Load
+[2025-07-21 15:18:27] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=49420
+[2025-07-21 15:18:27] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Free Memory
+[2025-07-21 15:18:27] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=50199
+[2025-07-21 15:18:27] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=Disk Space
+[2025-07-21 15:18:27] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25257
+[2025-07-21 15:18:27] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25258
+[2025-07-21 15:18:27] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25259
+[2025-07-21 15:18:28] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25263
+[2025-07-21 15:18:28] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25264
+[2025-07-21 15:18:28] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25265
+[2025-07-21 15:41:31] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=9
