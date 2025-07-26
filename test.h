@@ -15,4 +15,8 @@ const unordered_map<string, string> BIND_SAMPLE_DATA = {
 
 int test_regexp_api(ZabbixContext& zcontext);
 
+const unordered_map<string, std::function<int(ZabbixContext&)>> TEST_FUNCT_MAP = {
+    {"test_regexp_api", test_regexp_api}
+};
+
 #endif

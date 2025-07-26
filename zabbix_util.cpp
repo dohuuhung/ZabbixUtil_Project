@@ -2,9 +2,9 @@
 #include "zabbix_util.h"
 #include <yaml-cpp/yaml.h>
 #include <fmt/core.h>
-//#include <fmt/format.h>
 #include <curl/curl.h>
 #include "json.hpp"
+#include <windows.h>
 #include <iostream>
 #include <stdexcept>
 #include <fstream>
@@ -17,8 +17,23 @@
 using namespace std;
 using json = nlohmann::json;
 
+string getExecutableDirectory() {
+    char path[MAX_PATH];
+    DWORD length = GetModuleFileNameA(NULL, path, MAX_PATH);
+    if (length == 0 || length == MAX_PATH)
+        return "";
+
+    std::string fullPath(path);
+    size_t lastSlash = fullPath.find_last_of("\\/");
+    if (lastSlash != std::string::npos) {
+        return fullPath.substr(0, lastSlash);
+    }
+
+    return fullPath;
+}
+
 const int API_RETRY_TIME = 2;
-const string SUPPORT_ITEM_KEY_FILE = "config\\zabbix_supported_item_key.txt";
+const string SUPPORT_ITEM_KEY_FILE = getExecutableDirectory() + "\\config\\zabbix_supported_item_key.txt";
 typedef unordered_map<string, string> zinterface;
 
 typedef pair<string, string> Credentials;
@@ -93,6 +108,15 @@ unordered_map<string, string> parseJsonPair(const YAML::Node& jp) {
         string v = kv.second.as<std::string>();
         if (v == "null") continue;
         result[k] = v;
+    }
+    return result;
+}
+
+unordered_map<string, string> parseJsonItem(json jp) {
+	unordered_map<string, string> result;
+	for (auto& kv : jp.items()) {
+        if (kv.value() == "null") continue;
+        result[kv.key()] = kv.value();
     }
     return result;
 }
@@ -247,6 +271,30 @@ ZabbixTemplate parseZabbixTemplate(string template_file) {
 	}
     
     return zt;
+}
+
+int validateZabbixTemplate(ZabbixTemplate ztmpl, ZabbixContext& zcontext) {
+	// return 0 if ZabbixTemplate is valid, return 1 if invalid
+	// Validate template items
+    cout << "Validating template items..." << endl;
+    try {
+        validateItemList(ztmpl.zitems, zcontext);
+    } catch (const std::exception& e) {
+        cerr << "Error validating template items." << endl << e.what() << endl;
+        return 1;
+    }
+    cout << "OK" << endl;
+
+    // Validate template events
+    cout << "Validating template events..." << endl;
+    try {
+        validateEventList(ztmpl.zitems, ztmpl.zevents, zcontext);
+    } catch (const std::exception& e) {
+        cerr << "Error validating template events." << endl << e.what() << endl;
+        return 1;
+    }
+    cout << "OK" << endl;
+	return 0;
 }
 
 vector<ZabbixHost> parseHostList(string host_list_file) {
@@ -1261,6 +1309,32 @@ ZabbixRegex::ZabbixRegex(string n) {
     this->name = n;
 }
 
+string ZabbixRegex::genExpressionsStr() {
+	string expressions_str = "[";
+	int cnt = 0;
+	for (RegexExpression expression : this->expressions) {
+		cnt++;
+		string expression_str = "{";
+		for (auto it = expression.begin(); it != expression.end(); it++) {
+			string k = it->first;
+			string v = it->second;
+			if (it == expression.begin()) {
+				expression_str += makeKeyValueStr(k, v, REGEX_EXPRESSION_VALUE_TYPE_MAP.at(k));
+				continue;
+			}
+			expression_str += "," + makeKeyValueStr(k, v, REGEX_EXPRESSION_VALUE_TYPE_MAP.at(k));
+		}
+		expression_str += "}";
+		if (cnt == this->expressions.size()) {
+			expressions_str += expression_str;
+		} else {
+			expressions_str += expression_str + ",";
+		}
+	}
+	expressions_str += "]";
+	return expressions_str;
+}
+
 // API regexp.create
 int createRegexp(ZabbixRegex zr, ZabbixContext& zcontext) {
 	// return int(regexpid) if delete successfully, return -1 if failed
@@ -1280,28 +1354,7 @@ int createRegexp(ZabbixRegex zr, ZabbixContext& zcontext) {
 	if(!zr.test_string.empty()) {
 		param_str += "," + makeKeyValueStr("test_string", zr.test_string, REGEX_EXPRESSION_VALUE_TYPE_MAP.at("test_string"));
 	}
-	string expressions_str = "[";
-	int cnt = 0;
-	for (RegexExpression expression : zr.expressions) {
-		cnt++;
-		string expression_str = "{";
-		for (auto it = expression.begin(); it != expression.end(); it++) {
-			string k = it->first;
-			string v = it->second;
-			if (it == expression.begin()) {
-				expression_str += makeKeyValueStr(k, v, REGEX_EXPRESSION_VALUE_TYPE_MAP.at(k));
-				continue;
-			}
-			expression_str += "," + makeKeyValueStr(k, v, REGEX_EXPRESSION_VALUE_TYPE_MAP.at(k));
-		}
-		expression_str += "}";
-		if (cnt == zr.expressions.size()) {
-			expressions_str += expression_str;
-		} else {
-			expressions_str += expression_str + ",";
-		}
-	}
-	expressions_str += "]";
+	string expressions_str = zr.genExpressionsStr();
 	param_str += "," + makeKeyValueStr("expressions", expressions_str, REGEX_EXPRESSION_VALUE_TYPE_MAP.at("expressions"));
 
 	jsonData = fmt::format(jsonData, zr.name, param_str, zcontext.get_auth_token());
@@ -1314,6 +1367,112 @@ int createRegexp(ZabbixRegex zr, ZabbixContext& zcontext) {
     } else {
     	writeLog(log_file, "[zabbix-util.cpp->createRegexp()] create regexp fail \n");
         cerr << "Create failed. Full response:\n" << response_json.dump(2) << endl;
+        return -1;
+    }
+}
+
+// API regexp.delete
+int deleteRegexp(ZabbixRegex zr, ZabbixContext& zcontext) {
+	// return 0 if delete successfully, return 1 if failed
+	string log_file = zcontext.common_cfg["log_file"];
+	string jsonData = R"(
+	{{
+		"jsonrpc": "2.0",
+		"method": "regexp.delete",
+		"params": [
+			"{}"
+		],
+		"auth": "{}",
+		"id": 1
+    }}
+	)";
+	jsonData = fmt::format(jsonData, zr.regexpid, zcontext.get_auth_token());
+	string response = callZabbixAPI(zcontext, jsonData);
+	json response_json = json::parse(response);
+    if (response_json.contains("result")) {
+        int regexpid = stoi(response_json["result"]["regexpids"][0].get<std::string>());
+		writeLog(log_file, "[zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=" + zr.regexpid + "\n");
+		return 0;
+    } else {
+    	writeLog(log_file, "[zabbix-util.cpp->deleteRegexp()] delete regexp fail: regexpid=" + zr.regexpid + "\n");
+        cerr << "Delete failed. Full response:\n" << response_json.dump(2) << endl;
+        return 1;
+    }
+}
+
+// API regexp.get
+ZabbixRegex getRegexp(ZabbixContext& zcontext, string name) {
+	ZabbixRegex zr = ZabbixRegex("");
+	string log_file = zcontext.common_cfg["log_file"];
+	string jsonData = R"(
+	{{
+		"jsonrpc": "2.0",
+		"method": "regexp.get",
+		"params": {{
+			"output": ["regexpid", "name"],
+			"selectExpressions": ["expression", "expression_type", "case_sensitive"],
+			"preservekeys": false{}
+        }},
+		"auth": "{}",
+		"id": 1
+    }}
+	)";
+	string search_name = R"(,"search": {{"name": "{}"}})";
+	if (!name.empty()) {
+		search_name = fmt::format(search_name, name);
+		jsonData = fmt::format(jsonData, search_name, zcontext.get_auth_token());
+	} else {
+		jsonData = fmt::format(jsonData, "", zcontext.get_auth_token());
+	}
+	string response = callZabbixAPI(zcontext, jsonData);
+	json response_json = json::parse(response);
+    if (response_json.contains("result")) {
+		writeLog(log_file, "[zabbix-util.cpp->getRegexp()] get regexp successfully: name=" + name + "\n");
+		for (auto regexp : response_json["result"]) {
+			string _name = regexp["name"].get<std::string>();
+			if (!name.empty() && (name != _name)) continue;
+			zr.name = _name;
+			zr.regexpid = regexp["regexpid"].get<std::string>();
+			for (auto expression : regexp["expressions"]) {
+				zr.expressions.push_back(parseJsonItem(expression));
+			}
+			break;
+		}
+		return zr;
+    } else {
+    	writeLog(log_file, "[zabbix-util.cpp->getRegexp()] get regexp fail: name=" + name + "\n");
+        cerr << "Get failed. Full response:\n" << response_json.dump(2) << endl;
+        return zr;
+    }
+}
+
+// API regexp.update
+int updateRegexp(ZabbixRegex update_zr, ZabbixContext& zcontext) {
+	// return regexpid if update sucessfully, otherwise return -1 if update failed
+	string log_file = zcontext.common_cfg["log_file"];
+	string jsonData = R"(
+	{{
+		"jsonrpc": "2.0",
+		"method": "regexp.update",
+		"params": {{
+		"regexpid": "{}",{}
+        }},
+		"auth": "{}",
+		"id": 1
+    }}
+	)";
+	string expressions_str = update_zr.genExpressionsStr();
+	expressions_str = makeKeyValueStr("expressions", expressions_str, REGEX_EXPRESSION_VALUE_TYPE_MAP.at("expressions"));
+	jsonData = fmt::format(jsonData, update_zr.regexpid, expressions_str, zcontext.get_auth_token());
+	string response = callZabbixAPI(zcontext, jsonData);
+	json response_json = json::parse(response);
+    if (response_json.contains("result")) {
+        int regexpid = stoi(response_json["result"]["regexpids"][0].get<std::string>());
+		writeLog(log_file, "[zabbix-util.cpp->updateRegexp()] update regexp successfully: regexpid=" + update_zr.regexpid + "\n");
+		return regexpid;
+    } else {
+    	writeLog(log_file, "[zabbix-util.cpp->updateRegexp()] update regexp fail\n");
+        cerr << "Update failed. Full response:\n" << response_json.dump(2) << endl;
         return -1;
     }
 }

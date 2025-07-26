@@ -85,3 +85,5 @@ agent.ping
 agent.variant  
 agent.version  
 zabbix.stats
+icmppingloss
+vm.memory.utilization

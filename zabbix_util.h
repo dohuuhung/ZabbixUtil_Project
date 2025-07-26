@@ -23,6 +23,8 @@ string getEpochTimeString();
 
 YAML::Node loadYamlFile(const string& file_path);
 
+string getExecutableDirectory();
+
 class ZabbixContext{
 	private:
 		string zone_name;
@@ -106,6 +108,7 @@ class ZabbixTemplate{
 };
 
 ZabbixTemplate parseZabbixTemplate(string template_file);
+int validateZabbixTemplate(ZabbixTemplate ztmpl, ZabbixContext& zcontext);
 
 pair<int, pair<vector<ZabbixItem>, vector<ZabbixEvent>>> parseUpdateConf(string update_file);
 int update_mntr_conf(int update_mode, ZabbixHost zh, vector<ZabbixItem> update_ziv, vector<ZabbixEvent> update_zev, ZabbixContext& zcontext);
@@ -169,9 +172,20 @@ class ZabbixRegex{
 		vector<RegexExpression> expressions;
 
 		ZabbixRegex(string n);
+
+		string genExpressionsStr();
 };
 
 // API regexp.create
 int createRegexp(ZabbixRegex zr, ZabbixContext& zcontext);
+
+// API regexp.delete
+int deleteRegexp(ZabbixRegex zr, ZabbixContext& zcontext);
+
+// API regexp.get
+ZabbixRegex getRegexp(ZabbixContext& zcontext, string name="");
+
+// API regexp.update
+int updateRegexp(ZabbixRegex update_zr, ZabbixContext& zcontext);
 
 #endif

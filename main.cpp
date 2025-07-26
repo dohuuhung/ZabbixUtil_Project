@@ -1,9 +1,9 @@
 #include "logger.h"
 #include <fmt/core.h>
-//#include <fmt/format.h>
 #include "zabbix_util.h"
 #include "test.h"
 #include "CLI/CLI.hpp"
+#include <windows.h>
 #include <iostream>
 #include <stdexcept>
 #include <array>
@@ -22,11 +22,49 @@ ZabbixContext findZC(vector<ZabbixContext>& zcv, string zone_name) {
 	return ZabbixContext("Na");
 }
 
-void handle_test(string zone_name) {
+void handle_test(string zone_name, string test_funct, bool list_mode) {
 	ZabbixContext zc = findZC(zcvector, zone_name);
 	userLogin(zc);
 
-    test_regexp_api(zc);
+    if (list_mode) {
+        cout << "List of test function name:" << endl;
+        for (auto it : TEST_FUNCT_MAP) {
+            cout << "    " << it.first << endl;
+        }
+        return;
+    }
+
+    if (!test_funct.empty()) {
+        if (TEST_FUNCT_MAP.find(test_funct) == TEST_FUNCT_MAP.end()) {
+            cout << "Test function " << test_funct << " hasn't been defined before." << endl;
+            cout << "Stop job." << endl;
+            return;
+        }
+
+        cout << "Testing function " << test_funct << "..." << endl;
+        if (TEST_FUNCT_MAP.at(test_funct)(zc) == 0) {
+            cout << "OK" << endl;
+        } else {
+            cout << "FAIL" << endl;
+        }
+        return;
+    }
+
+    vector<string> fail_funct_list;
+    for (auto it : TEST_FUNCT_MAP) {
+        string test_funct_name = it.first;
+        cout << "Testing function " << test_funct_name << "..." << endl;
+        if (it.second(zc) == 0) {
+            cout << "OK" << endl;
+        } else {
+            cout << "FAIL" << endl;
+            fail_funct_list.push_back(test_funct_name);
+        }
+    }
+    cout << "List of failed functions:" << endl;
+    for (string fail_funct : fail_funct_list) {
+        cout << "    " << fail_funct << endl;
+    }
 }
 
 void handle_create_template(const string& zone_name, const string& template_input) {
@@ -40,6 +78,14 @@ void handle_create_template(const string& zone_name, const string& template_inpu
     }
     ZabbixContext zc = findZC(zcvector, zone_name);
 	userLogin(zc);
+
+    cout << "Start validate template..." << endl;
+    if (validateZabbixTemplate(ztmpl, zc) == 0) {
+        cout << "Template is valid" << endl;
+    } else {
+        cout << "Template is invalid." << endl << "Please check template content again." << endl << "Stop job" << endl;
+        return;
+    }
 	
 	int template_id = createTemplate(ztmpl.template_name, zc);	
 	if (template_id == -1) {
@@ -144,6 +190,7 @@ void handle_update_mntr_conf(string zone_name, const string& update_file,
 }
 
 int main(int argc, char** argv) {
+    DEFAULT_CFG_FILE = getExecutableDirectory() + "\\" + DEFAULT_CFG_FILE;
     try {
         zcvector = parseZabbixUtilConf(DEFAULT_CFG_FILE);
     } catch (const std::exception& e) {
@@ -153,14 +200,25 @@ int main(int argc, char** argv) {
 	
     CLI::App app{"Zabbix Utility Tool\n\nUse 'ZabbixUtil.exe <subcommand> -h' to see details for a specific subcommand."};
 
-    string zone_name;
+    string zone_name, test_funct;
+    bool list_mode = false;
+    test_funct = "";
     // === test ===
     auto test_cmd = app.add_subcommand("test", "Run test function");
     test_cmd->add_option("<zone_name>", zone_name, "Monitoring zone name")
         ->required() ->type_name("");
+    test_cmd->add_option("-f", test_funct, "Test function name") ->type_name("");
+    test_cmd->add_flag("-l", list_mode, "List all supported test function names.") ->type_name("");
     test_cmd->callback([&]() {
-        handle_test(zone_name);
+        if (!test_funct.empty() && list_mode) {
+            throw CLI::RequiredError("Options -f and -l mustn't exist together.");
+        }
+        handle_test(zone_name, test_funct, list_mode);
     });
+    test_cmd -> footer("E.x:\n"
+                       "  zabbix-util test PSKRW1\n"
+                       "  zabbix-util test -f test_regexp_api PSKRW1\n"
+                       "  zabbix-util test -l PSKRW1\n");
 
     // === create_template ===
     string template_input;
@@ -172,7 +230,7 @@ int main(int argc, char** argv) {
     create_template_cmd->callback([&]() {
         handle_create_template(zone_name, template_input);
     });
-    create_template_cmd -> footer("E.x: ZabbixUtil.exe create_template PSKRW1 default_template.txt");
+    create_template_cmd -> footer("E.x: zabbix-util create_template PSKRW1 default_template.txt");
 
     // === modify_metric ===
     string update_file, update_hostlist, update_hostname, ip_addr;
@@ -200,8 +258,8 @@ int main(int argc, char** argv) {
         handle_update_mntr_conf(zone_name, update_file, update_hostlist, update_hostname, ip_addr);
     });
     update_mntr_conf_cmd -> footer("E.x:\n"
-	                               "  ZabbixUtil.exe update_mntr_cfg -l host_list01.txt PSKRW1 modify01.txt\n"
-	                               "  ZabbixUtil.exe update_mntr_cfg --host server01 --ip 127.0.0.1 PSKRW1 modify01.txt\n");
+	                               "  zabbix-util update_mntr_cfg -l host_list01.txt PSKRW1 modify01.txt\n"
+	                               "  zabbix-util update_mntr_cfg --host server01 --ip 127.0.0.1 PSKRW1 modify01.txt\n");
 
     CLI11_PARSE(app, argc, argv);
     return 0;

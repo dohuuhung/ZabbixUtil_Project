@@ -1,0 +1,25 @@
+# update_mode:
+# - 0: based on update function => TODO Dev in the next version
+# - 1(default): like Maxigent, based on overwrite function. Delete old and then create new
+update_mode: 1
+
+items:
+  - name: available_memory_in_percentage
+    key_: vm.memory.size[pavailable]
+    type: 7
+    delay: 60s                   # delay value is interval time of collecting data from target device
+    status: 0                    # 0(default): enable item, 1: disable item
+    value_type: 0
+
+events:
+  - description: Percentage of available memory is low
+    event_name: MEM@check_mem_pavailable
+    triggers:
+      - expression: min(/{0}/vm.memory.size[pavailable],5m)>10 and max(/{0}/vm.memory.size[pavailable],5m)<=20
+        priority: 2                # 0: not classified, 1: information, 2: warning, 3: average, 4: high, 5: disaster
+        status: 0                  # Whether the trigger is enabled or disabled. 0: enabled, 1: disabled.
+        type: 0                    # 0: (default) do not generate multiple events, 1: generate multiple events
+      - expression: max(/{0}/vm.memory.size[pavailable],5m)<=10
+        priority: 4
+        status: 0
+        type: 0

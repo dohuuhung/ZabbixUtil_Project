@@ -1,0 +1,12 @@
+# update_mode:
+# - 0: based on update function => TODO Dev in the next version
+# - 1(default): like Maxigent, based on overwrite function. Delete old and then create new
+update_mode: 1
+
+items:
+  - name: icmp_ping
+    key_: icmppingloss[,3,1000,32,2000]
+    type: 7
+    delay: 60s                   # delay value is interval time of collecting data from target device
+    status: 0                    # 0(default): enable item, 1: disable item
+    value_type: 0

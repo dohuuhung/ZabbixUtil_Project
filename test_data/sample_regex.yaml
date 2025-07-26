@@ -7,3 +7,13 @@ regexps:
       - expression: "[E|e][R|r][R|r][O|o][R|r]"
         expression_type: 3
         case_sensitive: 1
+    test_update_expressions:
+      - expression: "testabc123xyz"
+        expression_type: 4
+        case_sensitive: 1
+      - expression: "[S|s][I|i][X|x]"
+        expression_type: 3
+        case_sensitive: 1
+      - expression: "."
+        expression_type: 3
+        case_sensitive: 1

@@ -1,0 +1,25 @@
+# update_mode:
+# - 0: based on update function => TODO Dev in the next version
+# - 1(default): like Maxigent, based on overwrite function. Delete old and then create new
+update_mode: 1
+
+items:
+  - name: memory_utilization
+    key_: vm.memory.utilization
+    type: 7
+    delay: 60s                   # delay value is interval time of collecting data from target device
+    status: 0                    # 0(default): enable item, 1: disable item
+    value_type: 0
+
+events:
+  - description: Available memory is low
+    event_name: MEM@check_mem_available
+    triggers:
+      - expression: (100-min(/{0}/vm.memory.utilization,5m))>=80 and (100-max(/{0}/vm.memory.utilization,5m))<90
+        priority: 2                # 0: not classified, 1: information, 2: warning, 3: average, 4: high, 5: disaster
+        status: 0                  # Whether the trigger is enabled or disabled. 0: enabled, 1: disabled.
+        type: 0                    # 0: (default) do not generate multiple events, 1: generate multiple events
+      - expression: (100-min(/{0}/vm.memory.utilization,5m))>=90 and (100-max(/{0}/vm.memory.utilization,5m))<=100
+        priority: 2
+        status: 0
+        type: 0

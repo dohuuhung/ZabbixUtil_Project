@@ -1034,3 +1034,125 @@
 [2025-07-21 15:18:28] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25264
 [2025-07-21 15:18:28] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25265
 [2025-07-21 15:41:31] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=9
+[2025-07-23 08:37:34] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-23 08:37:34] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-23 08:37:35] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753234654, template_id=10725
+[2025-07-23 08:38:26] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-23 08:38:26] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-23 08:38:27] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753234706, template_id=10726
+[2025-07-23 08:38:27] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory, item_id=52589
+[2025-07-23 08:38:27] [zabbix-util.cpp->createItem()] Create item successfully: item_name=icmp_ping, item_id=52590
+[2025-07-23 08:38:27] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory_in_percentage, item_id=52591
+[2025-07-23 08:38:27] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_system_usage, item_id=52592
+[2025-07-23 08:38:27] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_util_usage, item_id=52593
+[2025-07-23 08:38:28] [zabbix-util.cpp->createItem()] Create item successfully: item_name=memory_utilization, item_id=52594
+[2025-07-23 08:38:28] [zabbix-util.cpp->createItem()] Create item successfully: item_name=swap_usage, item_id=52595
+[2025-07-23 08:38:28] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753234706, template_id=10726
+[2025-07-23 08:38:28] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753234708, template_id=10727
+[2025-07-23 08:38:29] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory, item_id=52596
+[2025-07-23 08:38:29] [zabbix-util.cpp->createItem()] Create item successfully: item_name=icmp_ping, item_id=52597
+[2025-07-23 08:38:29] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory_in_percentage, item_id=52598
+[2025-07-23 08:38:29] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_system_usage, item_id=52599
+[2025-07-23 08:38:29] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_util_usage, item_id=52600
+[2025-07-23 08:38:29] [zabbix-util.cpp->createItem()] Create item successfully: item_name=memory_utilization, item_id=52601
+[2025-07-23 08:38:30] [zabbix-util.cpp->createItem()] Create item successfully: item_name=swap_usage, item_id=52602
+[2025-07-23 08:38:30] Start create event: MEM@check_mem_available
+[2025-07-23 08:38:30] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-23 08:38:30] Create event: MEM@check_mem_available failed
+[2025-07-23 08:38:30] Start create event: MEM@check_mem_pavailable
+[2025-07-23 08:38:30] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25388
+[2025-07-23 08:38:30] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25389
+[2025-07-23 08:38:30] Create event: MEM@check_mem_pavailable successfully
+[2025-07-23 08:38:30] Start create event: CPU_ALL@check_sys_usage
+[2025-07-23 08:38:30] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25390
+[2025-07-23 08:38:30] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25391
+[2025-07-23 08:38:30] Create event: CPU_ALL@check_sys_usage successfully
+[2025-07-23 08:38:30] Start create event: CPU_ALL@check_sys_usage
+[2025-07-23 08:38:31] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25392
+[2025-07-23 08:38:31] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25393
+[2025-07-23 08:38:31] Create event: CPU_ALL@check_sys_usage successfully
+[2025-07-23 08:38:31] Start create event: MEM@check_mem_available
+[2025-07-23 08:38:31] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25394
+[2025-07-23 08:38:31] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25395
+[2025-07-23 08:38:31] Create event: MEM@check_mem_available successfully
+[2025-07-23 08:38:31] Start create event: SWAPUSAGE@check_usage
+[2025-07-23 08:38:31] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25396
+[2025-07-23 08:38:31] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25397
+[2025-07-23 08:38:31] Create event: SWAPUSAGE@check_usage successfully
+[2025-07-23 08:38:32] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753234708, template_id=10727
+[2025-07-23 08:39:11] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-23 08:39:11] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-23 08:39:11] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753234751, template_id=10728
+[2025-07-23 08:39:11] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory, item_id=52603
+[2025-07-23 08:39:11] [zabbix-util.cpp->createItem()] Create item successfully: item_name=icmp_ping, item_id=52604
+[2025-07-23 08:39:11] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory_in_percentage, item_id=52605
+[2025-07-23 08:39:12] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_system_usage, item_id=52606
+[2025-07-23 08:39:12] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_util_usage, item_id=52607
+[2025-07-23 08:39:12] [zabbix-util.cpp->createItem()] Create item successfully: item_name=memory_utilization, item_id=52608
+[2025-07-23 08:39:12] [zabbix-util.cpp->createItem()] Create item successfully: item_name=swap_usage, item_id=52609
+[2025-07-23 08:39:12] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753234751, template_id=10728
+[2025-07-23 08:39:12] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753234752, template_id=10729
+[2025-07-23 08:39:13] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory, item_id=52610
+[2025-07-23 08:39:13] [zabbix-util.cpp->createItem()] Create item successfully: item_name=icmp_ping, item_id=52611
+[2025-07-23 08:39:13] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory_in_percentage, item_id=52612
+[2025-07-23 08:39:13] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_system_usage, item_id=52613
+[2025-07-23 08:39:14] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_util_usage, item_id=52614
+[2025-07-23 08:39:14] [zabbix-util.cpp->createItem()] Create item successfully: item_name=memory_utilization, item_id=52615
+[2025-07-23 08:39:14] [zabbix-util.cpp->createItem()] Create item successfully: item_name=swap_usage, item_id=52616
+[2025-07-23 08:39:14] Start create event: MEM@check_mem_pavailable
+[2025-07-23 08:39:14] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25398
+[2025-07-23 08:39:14] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25399
+[2025-07-23 08:39:14] Create event: MEM@check_mem_pavailable successfully
+[2025-07-23 08:39:14] Start create event: CPU_ALL@check_sys_usage
+[2025-07-23 08:39:14] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25400
+[2025-07-23 08:39:15] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25401
+[2025-07-23 08:39:15] Create event: CPU_ALL@check_sys_usage successfully
+[2025-07-23 08:39:15] Start create event: CPU_ALL@check_sys_usage
+[2025-07-23 08:39:15] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25402
+[2025-07-23 08:39:15] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25403
+[2025-07-23 08:39:15] Create event: CPU_ALL@check_sys_usage successfully
+[2025-07-23 08:39:15] Start create event: MEM@check_mem_available
+[2025-07-23 08:39:15] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25404
+[2025-07-23 08:39:15] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25405
+[2025-07-23 08:39:15] Create event: MEM@check_mem_available successfully
+[2025-07-23 08:39:15] Start create event: SWAPUSAGE@check_usage
+[2025-07-23 08:39:15] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25406
+[2025-07-23 08:39:16] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25407
+[2025-07-23 08:39:16] Create event: SWAPUSAGE@check_usage successfully
+[2025-07-23 08:39:16] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753234752, template_id=10729
+[2025-07-23 08:39:16] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10670 successfully. Number of item is: 0
+[2025-07-23 08:39:16] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10670 successfully. Number of trigger is: 0
+[2025-07-23 08:39:16] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory, item_id=52617
+[2025-07-23 08:39:16] Create item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=available_memory
+[2025-07-23 08:39:16] [zabbix-util.cpp->createItem()] Create item successfully: item_name=icmp_ping, item_id=52618
+[2025-07-23 08:39:16] Create item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=icmp_ping
+[2025-07-23 08:39:16] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory_in_percentage, item_id=52619
+[2025-07-23 08:39:16] Create item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=available_memory_in_percentage
+[2025-07-23 08:39:17] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_system_usage, item_id=52620
+[2025-07-23 08:39:17] Create item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=cpu_all_system_usage
+[2025-07-23 08:39:17] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_util_usage, item_id=52621
+[2025-07-23 08:39:17] Create item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=cpu_all_util_usage
+[2025-07-23 08:39:17] [zabbix-util.cpp->createItem()] Create item successfully: item_name=memory_utilization, item_id=52622
+[2025-07-23 08:39:17] Create item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=memory_utilization
+[2025-07-23 08:39:17] [zabbix-util.cpp->createItem()] Create item successfully: item_name=swap_usage, item_id=52623
+[2025-07-23 08:39:17] Create item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=swap_usage
+[2025-07-23 08:39:17] Start create event: MEM@check_mem_pavailable
+[2025-07-23 08:39:17] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25408
+[2025-07-23 08:39:17] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25409
+[2025-07-23 08:39:17] Create event: MEM@check_mem_pavailable successfully
+[2025-07-23 08:39:17] Start create event: CPU_ALL@check_sys_usage
+[2025-07-23 08:39:17] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25410
+[2025-07-23 08:39:18] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25411
+[2025-07-23 08:39:18] Create event: CPU_ALL@check_sys_usage successfully
+[2025-07-23 08:39:18] Start create event: CPU_ALL@check_sys_usage
+[2025-07-23 08:39:18] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25412
+[2025-07-23 08:39:18] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25413
+[2025-07-23 08:39:18] Create event: CPU_ALL@check_sys_usage successfully
+[2025-07-23 08:39:18] Start create event: MEM@check_mem_available
+[2025-07-23 08:39:18] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25414
+[2025-07-23 08:39:18] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25415
+[2025-07-23 08:39:18] Create event: MEM@check_mem_available successfully
+[2025-07-23 08:39:18] Start create event: SWAPUSAGE@check_usage
+[2025-07-23 08:39:18] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25416
+[2025-07-23 08:39:19] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25417
+[2025-07-23 08:39:19] Create event: SWAPUSAGE@check_usage successfully
