@@ -1156,3 +1156,1361 @@
 [2025-07-23 08:39:18] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25416
 [2025-07-23 08:39:19] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=25417
 [2025-07-23 08:39:19] Create event: SWAPUSAGE@check_usage successfully
+[2025-07-29 17:14:02] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-07-29 17:14:02] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-07-29 17:14:02] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-07-29 17:14:02] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-07-29 17:14:02] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-29 17:14:02] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-29 17:14:02] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-07-29 17:14:02] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-07-29 17:14:02] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753784042, template_id=10751
+[2025-07-29 17:15:05] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-07-29 17:15:05] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-07-29 17:15:05] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-07-29 17:15:05] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-07-29 17:15:06] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-29 17:15:06] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-29 17:15:06] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-07-29 17:15:06] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-07-29 17:15:06] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753784106, template_id=10752
+[2025-07-29 17:15:06] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory, item_id=53766
+[2025-07-29 17:15:06] [zabbix-util.cpp->createItem()] Create item successfully: item_name=icmp_ping, item_id=53767
+[2025-07-29 17:15:06] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory_in_percentage, item_id=53768
+[2025-07-29 17:15:07] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_system_usage, item_id=53769
+[2025-07-29 17:15:07] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_util_usage, item_id=53770
+[2025-07-29 17:15:07] [zabbix-util.cpp->createItem()] Create item successfully: item_name=memory_utilization, item_id=53771
+[2025-07-29 17:15:07] [zabbix-util.cpp->createItem()] Create item successfully: item_name=swap_usage, item_id=53772
+[2025-07-29 17:15:07] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_ntp_timegap, item_id=53773
+[2025-07-29 17:15:07] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_sys_cnt, item_id=53774
+[2025-07-29 17:15:08] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_uptime, item_id=53775
+[2025-07-29 17:15:08] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_agent_available, item_id=53776
+[2025-07-29 17:15:08] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753784106, template_id=10752
+[2025-07-29 17:15:08] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753784108, template_id=10753
+[2025-07-29 17:15:08] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory, item_id=53777
+[2025-07-29 17:15:08] [zabbix-util.cpp->createItem()] Create item successfully: item_name=icmp_ping, item_id=53778
+[2025-07-29 17:15:09] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory_in_percentage, item_id=53779
+[2025-07-29 17:15:09] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_system_usage, item_id=53780
+[2025-07-29 17:15:09] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_util_usage, item_id=53781
+[2025-07-29 17:15:09] [zabbix-util.cpp->createItem()] Create item successfully: item_name=memory_utilization, item_id=53782
+[2025-07-29 17:15:09] [zabbix-util.cpp->createItem()] Create item successfully: item_name=swap_usage, item_id=53783
+[2025-07-29 17:15:10] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_ntp_timegap, item_id=53784
+[2025-07-29 17:15:10] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_sys_cnt, item_id=53785
+[2025-07-29 17:15:10] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_uptime, item_id=53786
+[2025-07-29 17:15:10] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_agent_available, item_id=53787
+[2025-07-29 17:15:10] Start create event: check_icmp_ping
+[2025-07-29 17:15:10] [zabbix-util.cpp->createTrigger()] Create trigger fail: trigger_name=''
+[2025-07-29 17:15:10] Create event: check_icmp_ping failed
+[2025-07-29 17:15:10] Start create event: MEM@check_mem_pavailable
+[2025-07-29 17:15:10] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26089
+[2025-07-29 17:15:10] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26090
+[2025-07-29 17:15:10] Create event: MEM@check_mem_pavailable successfully
+[2025-07-29 17:15:10] Start create event: CPU_ALL@check_sys_usage
+[2025-07-29 17:15:11] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26091
+[2025-07-29 17:15:11] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26092
+[2025-07-29 17:15:11] Create event: CPU_ALL@check_sys_usage successfully
+[2025-07-29 17:15:11] Start create event: CPU_ALL@check_sys_usage
+[2025-07-29 17:15:11] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26093
+[2025-07-29 17:15:11] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26094
+[2025-07-29 17:15:11] Create event: CPU_ALL@check_sys_usage successfully
+[2025-07-29 17:15:11] Start create event: MEM@check_mem_available
+[2025-07-29 17:15:11] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26095
+[2025-07-29 17:15:12] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26096
+[2025-07-29 17:15:12] Create event: MEM@check_mem_available successfully
+[2025-07-29 17:15:12] Start create event: SWAPUSAGE@check_usage
+[2025-07-29 17:15:12] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26097
+[2025-07-29 17:15:12] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26098
+[2025-07-29 17:15:12] Create event: SWAPUSAGE@check_usage successfully
+[2025-07-29 17:15:12] Start create event: MXSC_NTP@check_ntp_timegap
+[2025-07-29 17:15:12] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26099
+[2025-07-29 17:15:12] Create event: MXSC_NTP@check_ntp_timegap successfully
+[2025-07-29 17:15:12] Start create event: MXSC_SOCKET@check_sys_cnt
+[2025-07-29 17:15:12] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26100
+[2025-07-29 17:15:12] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26101
+[2025-07-29 17:15:12] Create event: MXSC_SOCKET@check_sys_cnt successfully
+[2025-07-29 17:15:12] Start create event: UPTIME@check_uptime_latest
+[2025-07-29 17:15:13] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26102
+[2025-07-29 17:15:13] Create event: UPTIME@check_uptime_latest successfully
+[2025-07-29 17:15:13] Start create event: check_agent_available
+[2025-07-29 17:15:13] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26103
+[2025-07-29 17:15:13] Create event: check_agent_available successfully
+[2025-07-29 17:15:13] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753784108, template_id=10753
+[2025-07-29 17:15:53] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-07-29 17:15:53] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-07-29 17:15:53] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-07-29 17:15:53] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-07-29 17:15:53] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-29 17:15:53] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-29 17:15:53] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-07-29 17:15:53] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-07-29 17:15:53] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753784153, template_id=10754
+[2025-07-29 17:15:54] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory, item_id=53788
+[2025-07-29 17:15:54] [zabbix-util.cpp->createItem()] Create item successfully: item_name=icmp_ping, item_id=53789
+[2025-07-29 17:15:54] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory_in_percentage, item_id=53790
+[2025-07-29 17:15:54] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_system_usage, item_id=53791
+[2025-07-29 17:15:54] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_util_usage, item_id=53792
+[2025-07-29 17:15:54] [zabbix-util.cpp->createItem()] Create item successfully: item_name=memory_utilization, item_id=53793
+[2025-07-29 17:15:55] [zabbix-util.cpp->createItem()] Create item successfully: item_name=swap_usage, item_id=53794
+[2025-07-29 17:15:55] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_ntp_timegap, item_id=53795
+[2025-07-29 17:15:55] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_sys_cnt, item_id=53796
+[2025-07-29 17:15:55] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_uptime, item_id=53797
+[2025-07-29 17:15:55] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_agent_available, item_id=53798
+[2025-07-29 17:15:56] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753784153, template_id=10754
+[2025-07-29 17:15:56] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753784156, template_id=10755
+[2025-07-29 17:15:56] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory, item_id=53799
+[2025-07-29 17:15:56] [zabbix-util.cpp->createItem()] Create item successfully: item_name=icmp_ping, item_id=53800
+[2025-07-29 17:15:56] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory_in_percentage, item_id=53801
+[2025-07-29 17:15:57] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_system_usage, item_id=53802
+[2025-07-29 17:15:57] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_util_usage, item_id=53803
+[2025-07-29 17:15:57] [zabbix-util.cpp->createItem()] Create item successfully: item_name=memory_utilization, item_id=53804
+[2025-07-29 17:15:57] [zabbix-util.cpp->createItem()] Create item successfully: item_name=swap_usage, item_id=53805
+[2025-07-29 17:15:57] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_ntp_timegap, item_id=53806
+[2025-07-29 17:15:57] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_sys_cnt, item_id=53807
+[2025-07-29 17:15:57] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_uptime, item_id=53808
+[2025-07-29 17:15:58] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_agent_available, item_id=53809
+[2025-07-29 17:15:58] Start create event: check_icmp_ping
+[2025-07-29 17:15:58] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26104
+[2025-07-29 17:15:58] Create event: check_icmp_ping successfully
+[2025-07-29 17:15:58] Start create event: MEM@check_mem_pavailable
+[2025-07-29 17:15:58] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26105
+[2025-07-29 17:15:58] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26106
+[2025-07-29 17:15:58] Create event: MEM@check_mem_pavailable successfully
+[2025-07-29 17:15:58] Start create event: CPU_ALL@check_sys_usage
+[2025-07-29 17:15:58] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26107
+[2025-07-29 17:15:59] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26108
+[2025-07-29 17:15:59] Create event: CPU_ALL@check_sys_usage successfully
+[2025-07-29 17:15:59] Start create event: CPU_ALL@check_sys_usage
+[2025-07-29 17:15:59] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26109
+[2025-07-29 17:15:59] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26110
+[2025-07-29 17:15:59] Create event: CPU_ALL@check_sys_usage successfully
+[2025-07-29 17:15:59] Start create event: MEM@check_mem_available
+[2025-07-29 17:15:59] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26111
+[2025-07-29 17:15:59] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26112
+[2025-07-29 17:15:59] Create event: MEM@check_mem_available successfully
+[2025-07-29 17:15:59] Start create event: SWAPUSAGE@check_usage
+[2025-07-29 17:15:59] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26113
+[2025-07-29 17:16:00] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26114
+[2025-07-29 17:16:00] Create event: SWAPUSAGE@check_usage successfully
+[2025-07-29 17:16:00] Start create event: MXSC_NTP@check_ntp_timegap
+[2025-07-29 17:16:00] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26115
+[2025-07-29 17:16:00] Create event: MXSC_NTP@check_ntp_timegap successfully
+[2025-07-29 17:16:00] Start create event: MXSC_SOCKET@check_sys_cnt
+[2025-07-29 17:16:00] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26116
+[2025-07-29 17:16:00] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26117
+[2025-07-29 17:16:00] Create event: MXSC_SOCKET@check_sys_cnt successfully
+[2025-07-29 17:16:00] Start create event: UPTIME@check_uptime_latest
+[2025-07-29 17:16:00] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26118
+[2025-07-29 17:16:00] Create event: UPTIME@check_uptime_latest successfully
+[2025-07-29 17:16:00] Start create event: check_agent_available
+[2025-07-29 17:16:00] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26119
+[2025-07-29 17:16:00] Create event: check_agent_available successfully
+[2025-07-29 17:16:01] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753784156, template_id=10755
+[2025-07-29 17:16:01] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10629 successfully. Number of item is: 7
+[2025-07-29 17:16:01] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10629 successfully. Number of trigger is: 10
+[2025-07-29 17:16:01] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52733
+[2025-07-29 17:16:01] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=available_memory
+[2025-07-29 17:16:01] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52734
+[2025-07-29 17:16:01] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=icmp_ping
+[2025-07-29 17:16:01] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52735
+[2025-07-29 17:16:01] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=available_memory_in_percentage
+[2025-07-29 17:16:02] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52736
+[2025-07-29 17:16:02] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=cpu_all_system_usage
+[2025-07-29 17:16:02] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52737
+[2025-07-29 17:16:02] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=cpu_all_util_usage
+[2025-07-29 17:16:02] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52738
+[2025-07-29 17:16:02] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=memory_utilization
+[2025-07-29 17:16:02] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52739
+[2025-07-29 17:16:02] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=swap_usage
+[2025-07-29 17:16:02] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_ntp_timegap, item_id=53810
+[2025-07-29 17:16:02] Create item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=check_ntp_timegap
+[2025-07-29 17:16:02] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_sys_cnt, item_id=53811
+[2025-07-29 17:16:02] Create item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=check_sys_cnt
+[2025-07-29 17:16:03] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_uptime, item_id=53812
+[2025-07-29 17:16:03] Create item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=check_uptime
+[2025-07-29 17:16:03] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_agent_available, item_id=53813
+[2025-07-29 17:16:03] Create item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=check_agent_available
+[2025-07-29 17:16:03] Start create event: check_icmp_ping
+[2025-07-29 17:16:03] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26120
+[2025-07-29 17:16:03] Create event: check_icmp_ping successfully
+[2025-07-29 17:16:03] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25598
+[2025-07-29 17:16:03] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25599
+[2025-07-29 17:16:03] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26121
+[2025-07-29 17:16:03] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26122
+[2025-07-29 17:16:03] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25600
+[2025-07-29 17:16:04] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25601
+[2025-07-29 17:16:04] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26123
+[2025-07-29 17:16:04] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26124
+[2025-07-29 17:16:04] [zabbix-util.cpp->deleteTrigger()] Delete trigger fail: triggerid='25600'
+[2025-07-29 17:16:04] [zabbix-util.cpp->deleteTrigger()] Delete trigger fail: triggerid='25601'
+[2025-07-29 17:16:04] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26125
+[2025-07-29 17:16:05] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26126
+[2025-07-29 17:16:05] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25604
+[2025-07-29 17:16:05] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25605
+[2025-07-29 17:16:05] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26127
+[2025-07-29 17:16:05] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26128
+[2025-07-29 17:16:05] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25606
+[2025-07-29 17:16:06] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25607
+[2025-07-29 17:16:06] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26129
+[2025-07-29 17:16:06] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26130
+[2025-07-29 17:16:06] Start create event: MXSC_NTP@check_ntp_timegap
+[2025-07-29 17:16:06] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26131
+[2025-07-29 17:16:06] Create event: MXSC_NTP@check_ntp_timegap successfully
+[2025-07-29 17:16:06] Start create event: MXSC_SOCKET@check_sys_cnt
+[2025-07-29 17:16:06] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26132
+[2025-07-29 17:16:06] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26133
+[2025-07-29 17:16:06] Create event: MXSC_SOCKET@check_sys_cnt successfully
+[2025-07-29 17:16:06] Start create event: UPTIME@check_uptime_latest
+[2025-07-29 17:16:07] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26134
+[2025-07-29 17:16:07] Create event: UPTIME@check_uptime_latest successfully
+[2025-07-29 17:16:07] Start create event: check_agent_available
+[2025-07-29 17:16:07] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26135
+[2025-07-29 17:16:07] Create event: check_agent_available successfully
+[2025-07-29 17:16:07] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10657 successfully. Number of item is: 7
+[2025-07-29 17:16:07] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10657 successfully. Number of trigger is: 10
+[2025-07-29 17:16:07] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52740
+[2025-07-29 17:16:07] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=available_memory
+[2025-07-29 17:16:08] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52741
+[2025-07-29 17:16:08] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=icmp_ping
+[2025-07-29 17:16:08] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52742
+[2025-07-29 17:16:08] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=available_memory_in_percentage
+[2025-07-29 17:16:08] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52743
+[2025-07-29 17:16:08] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=cpu_all_system_usage
+[2025-07-29 17:16:08] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52744
+[2025-07-29 17:16:08] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=cpu_all_util_usage
+[2025-07-29 17:16:08] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52745
+[2025-07-29 17:16:08] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=memory_utilization
+[2025-07-29 17:16:08] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52746
+[2025-07-29 17:16:08] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=swap_usage
+[2025-07-29 17:16:08] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_ntp_timegap, item_id=53814
+[2025-07-29 17:16:08] Create item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=check_ntp_timegap
+[2025-07-29 17:16:09] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_sys_cnt, item_id=53815
+[2025-07-29 17:16:09] Create item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=check_sys_cnt
+[2025-07-29 17:16:09] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_uptime, item_id=53816
+[2025-07-29 17:16:09] Create item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=check_uptime
+[2025-07-29 17:16:09] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_agent_available, item_id=53817
+[2025-07-29 17:16:09] Create item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=check_agent_available
+[2025-07-29 17:16:09] Start create event: check_icmp_ping
+[2025-07-29 17:16:09] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26136
+[2025-07-29 17:16:09] Create event: check_icmp_ping successfully
+[2025-07-29 17:16:09] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25608
+[2025-07-29 17:16:09] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25609
+[2025-07-29 17:16:10] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26137
+[2025-07-29 17:16:10] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26138
+[2025-07-29 17:16:10] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25610
+[2025-07-29 17:16:10] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25611
+[2025-07-29 17:16:10] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26139
+[2025-07-29 17:16:10] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26140
+[2025-07-29 17:16:10] [zabbix-util.cpp->deleteTrigger()] Delete trigger fail: triggerid='25610'
+[2025-07-29 17:16:10] [zabbix-util.cpp->deleteTrigger()] Delete trigger fail: triggerid='25611'
+[2025-07-29 17:16:11] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26141
+[2025-07-29 17:16:11] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26142
+[2025-07-29 17:16:11] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25614
+[2025-07-29 17:16:11] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25615
+[2025-07-29 17:16:11] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26143
+[2025-07-29 17:16:12] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26144
+[2025-07-29 17:16:12] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25616
+[2025-07-29 17:16:12] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25617
+[2025-07-29 17:16:12] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26145
+[2025-07-29 17:16:12] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26146
+[2025-07-29 17:16:12] Start create event: MXSC_NTP@check_ntp_timegap
+[2025-07-29 17:16:12] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26147
+[2025-07-29 17:16:12] Create event: MXSC_NTP@check_ntp_timegap successfully
+[2025-07-29 17:16:12] Start create event: MXSC_SOCKET@check_sys_cnt
+[2025-07-29 17:16:13] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26148
+[2025-07-29 17:16:13] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26149
+[2025-07-29 17:16:13] Create event: MXSC_SOCKET@check_sys_cnt successfully
+[2025-07-29 17:16:13] Start create event: UPTIME@check_uptime_latest
+[2025-07-29 17:16:13] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26150
+[2025-07-29 17:16:13] Create event: UPTIME@check_uptime_latest successfully
+[2025-07-29 17:16:13] Start create event: check_agent_available
+[2025-07-29 17:16:13] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26151
+[2025-07-29 17:16:13] Create event: check_agent_available successfully
+[2025-07-29 17:16:13] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10670 successfully. Number of item is: 7
+[2025-07-29 17:16:14] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10670 successfully. Number of trigger is: 10
+[2025-07-29 17:16:14] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52747
+[2025-07-29 17:16:14] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=available_memory
+[2025-07-29 17:16:14] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52748
+[2025-07-29 17:16:14] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=icmp_ping
+[2025-07-29 17:16:14] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52749
+[2025-07-29 17:16:14] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=available_memory_in_percentage
+[2025-07-29 17:16:14] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52750
+[2025-07-29 17:16:14] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=cpu_all_system_usage
+[2025-07-29 17:16:14] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52751
+[2025-07-29 17:16:14] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=cpu_all_util_usage
+[2025-07-29 17:16:14] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52752
+[2025-07-29 17:16:14] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=memory_utilization
+[2025-07-29 17:16:15] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52753
+[2025-07-29 17:16:15] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=swap_usage
+[2025-07-29 17:16:15] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_ntp_timegap, item_id=53818
+[2025-07-29 17:16:15] Create item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=check_ntp_timegap
+[2025-07-29 17:16:15] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_sys_cnt, item_id=53819
+[2025-07-29 17:16:15] Create item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=check_sys_cnt
+[2025-07-29 17:16:15] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_uptime, item_id=53820
+[2025-07-29 17:16:15] Create item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=check_uptime
+[2025-07-29 17:16:15] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_agent_available, item_id=53821
+[2025-07-29 17:16:15] Create item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=check_agent_available
+[2025-07-29 17:16:15] Start create event: check_icmp_ping
+[2025-07-29 17:16:15] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26152
+[2025-07-29 17:16:15] Create event: check_icmp_ping successfully
+[2025-07-29 17:16:16] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25618
+[2025-07-29 17:16:16] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25619
+[2025-07-29 17:16:16] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26153
+[2025-07-29 17:16:16] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26154
+[2025-07-29 17:16:16] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25620
+[2025-07-29 17:16:16] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25621
+[2025-07-29 17:16:17] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26155
+[2025-07-29 17:16:17] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26156
+[2025-07-29 17:16:17] [zabbix-util.cpp->deleteTrigger()] Delete trigger fail: triggerid='25620'
+[2025-07-29 17:16:17] [zabbix-util.cpp->deleteTrigger()] Delete trigger fail: triggerid='25621'
+[2025-07-29 17:16:17] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26157
+[2025-07-29 17:16:17] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26158
+[2025-07-29 17:16:18] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25624
+[2025-07-29 17:16:18] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25625
+[2025-07-29 17:16:18] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26159
+[2025-07-29 17:16:18] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26160
+[2025-07-29 17:16:18] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25626
+[2025-07-29 17:16:18] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25627
+[2025-07-29 17:16:19] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26161
+[2025-07-29 17:16:19] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26162
+[2025-07-29 17:16:19] Start create event: MXSC_NTP@check_ntp_timegap
+[2025-07-29 17:16:19] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26163
+[2025-07-29 17:16:19] Create event: MXSC_NTP@check_ntp_timegap successfully
+[2025-07-29 17:16:19] Start create event: MXSC_SOCKET@check_sys_cnt
+[2025-07-29 17:16:19] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26164
+[2025-07-29 17:16:19] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26165
+[2025-07-29 17:16:19] Create event: MXSC_SOCKET@check_sys_cnt successfully
+[2025-07-29 17:16:19] Start create event: UPTIME@check_uptime_latest
+[2025-07-29 17:16:19] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26166
+[2025-07-29 17:16:19] Create event: UPTIME@check_uptime_latest successfully
+[2025-07-29 17:16:19] Start create event: check_agent_available
+[2025-07-29 17:16:19] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26167
+[2025-07-29 17:16:19] Create event: check_agent_available successfully
+[2025-07-29 17:16:20] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10658 successfully. Number of item is: 7
+[2025-07-29 17:16:20] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10658 successfully. Number of trigger is: 10
+[2025-07-29 17:16:20] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52754
+[2025-07-29 17:16:20] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=available_memory
+[2025-07-29 17:16:20] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52755
+[2025-07-29 17:16:20] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=icmp_ping
+[2025-07-29 17:16:20] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52756
+[2025-07-29 17:16:20] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=available_memory_in_percentage
+[2025-07-29 17:16:21] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52757
+[2025-07-29 17:16:21] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=cpu_all_system_usage
+[2025-07-29 17:16:21] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52758
+[2025-07-29 17:16:21] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=cpu_all_util_usage
+[2025-07-29 17:16:21] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52759
+[2025-07-29 17:16:21] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=memory_utilization
+[2025-07-29 17:16:21] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52760
+[2025-07-29 17:16:21] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=swap_usage
+[2025-07-29 17:16:21] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_ntp_timegap, item_id=53822
+[2025-07-29 17:16:21] Create item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=check_ntp_timegap
+[2025-07-29 17:16:21] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_sys_cnt, item_id=53823
+[2025-07-29 17:16:21] Create item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=check_sys_cnt
+[2025-07-29 17:16:22] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_uptime, item_id=53824
+[2025-07-29 17:16:22] Create item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=check_uptime
+[2025-07-29 17:16:22] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_agent_available, item_id=53825
+[2025-07-29 17:16:22] Create item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=check_agent_available
+[2025-07-29 17:16:22] Start create event: check_icmp_ping
+[2025-07-29 17:16:22] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26168
+[2025-07-29 17:16:22] Create event: check_icmp_ping successfully
+[2025-07-29 17:16:22] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25628
+[2025-07-29 17:16:22] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25629
+[2025-07-29 17:16:22] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26169
+[2025-07-29 17:16:23] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26170
+[2025-07-29 17:16:23] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25630
+[2025-07-29 17:16:23] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25631
+[2025-07-29 17:16:23] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26171
+[2025-07-29 17:16:23] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26172
+[2025-07-29 17:16:23] [zabbix-util.cpp->deleteTrigger()] Delete trigger fail: triggerid='25630'
+[2025-07-29 17:16:24] [zabbix-util.cpp->deleteTrigger()] Delete trigger fail: triggerid='25631'
+[2025-07-29 17:16:24] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26173
+[2025-07-29 17:16:24] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26174
+[2025-07-29 17:16:24] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25634
+[2025-07-29 17:16:24] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25635
+[2025-07-29 17:16:24] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26175
+[2025-07-29 17:16:25] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26176
+[2025-07-29 17:16:25] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25636
+[2025-07-29 17:16:25] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=25637
+[2025-07-29 17:16:25] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26177
+[2025-07-29 17:16:25] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26178
+[2025-07-29 17:16:25] Start create event: MXSC_NTP@check_ntp_timegap
+[2025-07-29 17:16:25] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26179
+[2025-07-29 17:16:25] Create event: MXSC_NTP@check_ntp_timegap successfully
+[2025-07-29 17:16:25] Start create event: MXSC_SOCKET@check_sys_cnt
+[2025-07-29 17:16:25] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26180
+[2025-07-29 17:16:26] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26181
+[2025-07-29 17:16:26] Create event: MXSC_SOCKET@check_sys_cnt successfully
+[2025-07-29 17:16:26] Start create event: UPTIME@check_uptime_latest
+[2025-07-29 17:16:26] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26182
+[2025-07-29 17:16:26] Create event: UPTIME@check_uptime_latest successfully
+[2025-07-29 17:16:26] Start create event: check_agent_available
+[2025-07-29 17:16:26] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26183
+[2025-07-29 17:16:26] Create event: check_agent_available successfully
+[2025-07-29 17:21:25] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-07-29 17:21:25] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-07-29 17:21:25] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-07-29 17:21:25] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-07-29 17:21:25] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-07-29 17:21:25] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-07-29 17:21:26] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-07-29 17:21:26] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-07-29 17:21:26] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753784486, template_id=10756
+[2025-07-29 17:21:26] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory, item_id=53826
+[2025-07-29 17:21:26] [zabbix-util.cpp->createItem()] Create item successfully: item_name=icmp_ping, item_id=53827
+[2025-07-29 17:21:26] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory_in_percentage, item_id=53828
+[2025-07-29 17:21:26] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_system_usage, item_id=53829
+[2025-07-29 17:21:27] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_usage, item_id=53830
+[2025-07-29 17:21:27] [zabbix-util.cpp->createItem()] Create item successfully: item_name=memory_utilization, item_id=53831
+[2025-07-29 17:21:27] [zabbix-util.cpp->createItem()] Create item successfully: item_name=swap_usage, item_id=53832
+[2025-07-29 17:21:27] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_ntp_timegap, item_id=53833
+[2025-07-29 17:21:27] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_sys_cnt, item_id=53834
+[2025-07-29 17:21:27] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_uptime, item_id=53835
+[2025-07-29 17:21:28] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_agent_available, item_id=53836
+[2025-07-29 17:21:28] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753784486, template_id=10756
+[2025-07-29 17:21:28] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1753784488, template_id=10757
+[2025-07-29 17:21:28] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory, item_id=53837
+[2025-07-29 17:21:29] [zabbix-util.cpp->createItem()] Create item successfully: item_name=icmp_ping, item_id=53838
+[2025-07-29 17:21:29] [zabbix-util.cpp->createItem()] Create item successfully: item_name=available_memory_in_percentage, item_id=53839
+[2025-07-29 17:21:29] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_system_usage, item_id=53840
+[2025-07-29 17:21:29] [zabbix-util.cpp->createItem()] Create item successfully: item_name=cpu_all_usage, item_id=53841
+[2025-07-29 17:21:29] [zabbix-util.cpp->createItem()] Create item successfully: item_name=memory_utilization, item_id=53842
+[2025-07-29 17:21:29] [zabbix-util.cpp->createItem()] Create item successfully: item_name=swap_usage, item_id=53843
+[2025-07-29 17:21:30] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_ntp_timegap, item_id=53844
+[2025-07-29 17:21:30] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_sys_cnt, item_id=53845
+[2025-07-29 17:21:30] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_uptime, item_id=53846
+[2025-07-29 17:21:30] [zabbix-util.cpp->createItem()] Create item successfully: item_name=check_agent_available, item_id=53847
+[2025-07-29 17:21:30] Start create event: check_icmp_ping
+[2025-07-29 17:21:30] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26184
+[2025-07-29 17:21:30] Create event: check_icmp_ping successfully
+[2025-07-29 17:21:30] Start create event: MEM@check_mem_pavailable
+[2025-07-29 17:21:30] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26185
+[2025-07-29 17:21:31] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26186
+[2025-07-29 17:21:31] Create event: MEM@check_mem_pavailable successfully
+[2025-07-29 17:21:31] Start create event: CPU_ALL@check_sys_usage
+[2025-07-29 17:21:31] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26187
+[2025-07-29 17:21:31] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26188
+[2025-07-29 17:21:31] Create event: CPU_ALL@check_sys_usage successfully
+[2025-07-29 17:21:31] Start create event: CPU_ALL@check_cpu_usage
+[2025-07-29 17:21:31] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26189
+[2025-07-29 17:21:31] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26190
+[2025-07-29 17:21:31] Create event: CPU_ALL@check_cpu_usage successfully
+[2025-07-29 17:21:31] Start create event: MEM@check_mem_available
+[2025-07-29 17:21:31] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26191
+[2025-07-29 17:21:32] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26192
+[2025-07-29 17:21:32] Create event: MEM@check_mem_available successfully
+[2025-07-29 17:21:32] Start create event: SWAPUSAGE@check_usage
+[2025-07-29 17:21:32] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26193
+[2025-07-29 17:21:32] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26194
+[2025-07-29 17:21:32] Create event: SWAPUSAGE@check_usage successfully
+[2025-07-29 17:21:32] Start create event: MXSC_NTP@check_ntp_timegap
+[2025-07-29 17:21:32] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26195
+[2025-07-29 17:21:32] Create event: MXSC_NTP@check_ntp_timegap successfully
+[2025-07-29 17:21:32] Start create event: MXSC_SOCKET@check_sys_cnt
+[2025-07-29 17:21:32] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26196
+[2025-07-29 17:21:33] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26197
+[2025-07-29 17:21:33] Create event: MXSC_SOCKET@check_sys_cnt successfully
+[2025-07-29 17:21:33] Start create event: UPTIME@check_uptime_latest
+[2025-07-29 17:21:33] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26198
+[2025-07-29 17:21:33] Create event: UPTIME@check_uptime_latest successfully
+[2025-07-29 17:21:33] Start create event: check_agent_available
+[2025-07-29 17:21:33] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26199
+[2025-07-29 17:21:33] Create event: check_agent_available successfully
+[2025-07-29 17:21:33] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1753784488, template_id=10757
+[2025-07-29 17:21:33] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10629 successfully. Number of item is: 11
+[2025-07-29 17:21:33] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10629 successfully. Number of trigger is: 18
+[2025-07-29 17:21:34] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52733
+[2025-07-29 17:21:34] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=available_memory
+[2025-07-29 17:21:34] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52734
+[2025-07-29 17:21:34] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=icmp_ping
+[2025-07-29 17:21:34] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52735
+[2025-07-29 17:21:34] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=available_memory_in_percentage
+[2025-07-29 17:21:34] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52736
+[2025-07-29 17:21:34] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=cpu_all_system_usage
+[2025-07-29 17:21:34] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52737
+[2025-07-29 17:21:34] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=cpu_all_usage
+[2025-07-29 17:21:34] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52738
+[2025-07-29 17:21:34] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=memory_utilization
+[2025-07-29 17:21:35] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52739
+[2025-07-29 17:21:35] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=swap_usage
+[2025-07-29 17:21:35] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=53810
+[2025-07-29 17:21:35] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=check_ntp_timegap
+[2025-07-29 17:21:35] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=53811
+[2025-07-29 17:21:35] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=check_sys_cnt
+[2025-07-29 17:21:35] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=53812
+[2025-07-29 17:21:35] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=check_uptime
+[2025-07-29 17:21:35] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=53813
+[2025-07-29 17:21:35] Update item success: host_name=fake_dh.hung_Linux_host, host_ip=, item=check_agent_available
+[2025-07-29 17:21:35] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26120
+[2025-07-29 17:21:36] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26200
+[2025-07-29 17:21:36] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26121
+[2025-07-29 17:21:36] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26122
+[2025-07-29 17:21:36] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26201
+[2025-07-29 17:21:36] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26202
+[2025-07-29 17:21:36] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26123
+[2025-07-29 17:21:37] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26124
+[2025-07-29 17:21:37] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26125
+[2025-07-29 17:21:37] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26126
+[2025-07-29 17:21:37] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26203
+[2025-07-29 17:21:37] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26204
+[2025-07-29 17:21:37] Start create event: CPU_ALL@check_cpu_usage
+[2025-07-29 17:21:37] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26205
+[2025-07-29 17:21:38] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26206
+[2025-07-29 17:21:38] Create event: CPU_ALL@check_cpu_usage successfully
+[2025-07-29 17:21:38] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26127
+[2025-07-29 17:21:38] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26128
+[2025-07-29 17:21:38] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26207
+[2025-07-29 17:21:38] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26208
+[2025-07-29 17:21:38] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26129
+[2025-07-29 17:21:38] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26130
+[2025-07-29 17:21:39] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26209
+[2025-07-29 17:21:39] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26210
+[2025-07-29 17:21:39] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26131
+[2025-07-29 17:21:39] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26211
+[2025-07-29 17:21:39] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26132
+[2025-07-29 17:21:40] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26133
+[2025-07-29 17:21:40] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26212
+[2025-07-29 17:21:40] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26213
+[2025-07-29 17:21:40] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26134
+[2025-07-29 17:21:40] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26214
+[2025-07-29 17:21:40] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26135
+[2025-07-29 17:21:41] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26215
+[2025-07-29 17:21:41] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10657 successfully. Number of item is: 11
+[2025-07-29 17:21:41] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10657 successfully. Number of trigger is: 18
+[2025-07-29 17:21:41] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52740
+[2025-07-29 17:21:41] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=available_memory
+[2025-07-29 17:21:41] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52741
+[2025-07-29 17:21:41] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=icmp_ping
+[2025-07-29 17:21:41] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52742
+[2025-07-29 17:21:41] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=available_memory_in_percentage
+[2025-07-29 17:21:41] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52743
+[2025-07-29 17:21:41] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=cpu_all_system_usage
+[2025-07-29 17:21:42] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52744
+[2025-07-29 17:21:42] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=cpu_all_usage
+[2025-07-29 17:21:42] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52745
+[2025-07-29 17:21:42] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=memory_utilization
+[2025-07-29 17:21:42] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52746
+[2025-07-29 17:21:42] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=swap_usage
+[2025-07-29 17:21:42] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=53814
+[2025-07-29 17:21:42] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=check_ntp_timegap
+[2025-07-29 17:21:42] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=53815
+[2025-07-29 17:21:42] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=check_sys_cnt
+[2025-07-29 17:21:43] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=53816
+[2025-07-29 17:21:43] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=check_uptime
+[2025-07-29 17:21:43] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=53817
+[2025-07-29 17:21:43] Update item success: host_name=fake_dh.hung_Linux_host01, host_ip=, item=check_agent_available
+[2025-07-29 17:21:43] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26136
+[2025-07-29 17:21:43] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26216
+[2025-07-29 17:21:43] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26137
+[2025-07-29 17:21:43] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26138
+[2025-07-29 17:21:44] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26217
+[2025-07-29 17:21:44] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26218
+[2025-07-29 17:21:44] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26139
+[2025-07-29 17:21:44] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26140
+[2025-07-29 17:21:44] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26141
+[2025-07-29 17:21:44] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26142
+[2025-07-29 17:21:45] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26219
+[2025-07-29 17:21:45] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26220
+[2025-07-29 17:21:45] Start create event: CPU_ALL@check_cpu_usage
+[2025-07-29 17:21:45] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26221
+[2025-07-29 17:21:45] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26222
+[2025-07-29 17:21:45] Create event: CPU_ALL@check_cpu_usage successfully
+[2025-07-29 17:21:45] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26143
+[2025-07-29 17:21:45] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26144
+[2025-07-29 17:21:46] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26223
+[2025-07-29 17:21:46] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26224
+[2025-07-29 17:21:46] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26145
+[2025-07-29 17:21:46] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26146
+[2025-07-29 17:21:46] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26225
+[2025-07-29 17:21:47] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26226
+[2025-07-29 17:21:47] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26147
+[2025-07-29 17:21:47] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26227
+[2025-07-29 17:21:47] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26148
+[2025-07-29 17:21:47] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26149
+[2025-07-29 17:21:47] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26228
+[2025-07-29 17:21:48] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26229
+[2025-07-29 17:21:48] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26150
+[2025-07-29 17:21:48] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26230
+[2025-07-29 17:21:48] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26151
+[2025-07-29 17:21:48] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26231
+[2025-07-29 17:21:48] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10670 successfully. Number of item is: 11
+[2025-07-29 17:21:49] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10670 successfully. Number of trigger is: 18
+[2025-07-29 17:21:49] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52747
+[2025-07-29 17:21:49] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=available_memory
+[2025-07-29 17:21:49] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52748
+[2025-07-29 17:21:49] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=icmp_ping
+[2025-07-29 17:21:49] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52749
+[2025-07-29 17:21:49] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=available_memory_in_percentage
+[2025-07-29 17:21:49] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52750
+[2025-07-29 17:21:49] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=cpu_all_system_usage
+[2025-07-29 17:21:49] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52751
+[2025-07-29 17:21:49] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=cpu_all_usage
+[2025-07-29 17:21:49] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52752
+[2025-07-29 17:21:49] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=memory_utilization
+[2025-07-29 17:21:50] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52753
+[2025-07-29 17:21:50] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=swap_usage
+[2025-07-29 17:21:50] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=53818
+[2025-07-29 17:21:50] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=check_ntp_timegap
+[2025-07-29 17:21:50] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=53819
+[2025-07-29 17:21:50] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=check_sys_cnt
+[2025-07-29 17:21:50] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=53820
+[2025-07-29 17:21:50] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=check_uptime
+[2025-07-29 17:21:50] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=53821
+[2025-07-29 17:21:50] Update item success: host_name=fake_dh.hung_Linux_host02, host_ip=, item=check_agent_available
+[2025-07-29 17:21:50] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26152
+[2025-07-29 17:21:51] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26232
+[2025-07-29 17:21:51] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26153
+[2025-07-29 17:21:51] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26154
+[2025-07-29 17:21:51] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26233
+[2025-07-29 17:21:51] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26234
+[2025-07-29 17:21:51] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26155
+[2025-07-29 17:21:52] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26156
+[2025-07-29 17:21:52] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26157
+[2025-07-29 17:21:52] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26158
+[2025-07-29 17:21:52] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26235
+[2025-07-29 17:21:52] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26236
+[2025-07-29 17:21:52] Start create event: CPU_ALL@check_cpu_usage
+[2025-07-29 17:21:52] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26237
+[2025-07-29 17:21:53] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26238
+[2025-07-29 17:21:53] Create event: CPU_ALL@check_cpu_usage successfully
+[2025-07-29 17:21:53] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26159
+[2025-07-29 17:21:53] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26160
+[2025-07-29 17:21:53] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26239
+[2025-07-29 17:21:53] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26240
+[2025-07-29 17:21:53] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26161
+[2025-07-29 17:21:54] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26162
+[2025-07-29 17:21:54] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26241
+[2025-07-29 17:21:54] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26242
+[2025-07-29 17:21:54] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26163
+[2025-07-29 17:21:54] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26243
+[2025-07-29 17:21:55] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26164
+[2025-07-29 17:21:55] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26165
+[2025-07-29 17:21:55] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26244
+[2025-07-29 17:21:55] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26245
+[2025-07-29 17:21:55] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26166
+[2025-07-29 17:21:55] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26246
+[2025-07-29 17:21:56] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26167
+[2025-07-29 17:21:56] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26247
+[2025-07-29 17:21:56] [zabbix-util.cpp->getAllItemOfHost()] Get item of 10658 successfully. Number of item is: 11
+[2025-07-29 17:21:56] [zabbix-util.cpp->getAllTriggerOfHost()] Get trigger of 10658 successfully. Number of trigger is: 18
+[2025-07-29 17:21:56] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52754
+[2025-07-29 17:21:56] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=available_memory
+[2025-07-29 17:21:57] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52755
+[2025-07-29 17:21:57] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=icmp_ping
+[2025-07-29 17:21:57] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52756
+[2025-07-29 17:21:57] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=available_memory_in_percentage
+[2025-07-29 17:21:57] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52757
+[2025-07-29 17:21:57] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=cpu_all_system_usage
+[2025-07-29 17:21:57] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52758
+[2025-07-29 17:21:57] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=cpu_all_usage
+[2025-07-29 17:21:57] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52759
+[2025-07-29 17:21:57] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=memory_utilization
+[2025-07-29 17:21:57] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=52760
+[2025-07-29 17:21:57] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=swap_usage
+[2025-07-29 17:21:58] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=53822
+[2025-07-29 17:21:58] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=check_ntp_timegap
+[2025-07-29 17:21:58] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=53823
+[2025-07-29 17:21:58] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=check_sys_cnt
+[2025-07-29 17:21:58] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=53824
+[2025-07-29 17:21:58] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=check_uptime
+[2025-07-29 17:21:58] [zabbix-util.cpp->updateItem()] Update item successfully: itemid=53825
+[2025-07-29 17:21:58] Update item success: host_name=fake_dh.hung_Linux_host03, host_ip=, item=check_agent_available
+[2025-07-29 17:21:58] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26168
+[2025-07-29 17:21:58] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26248
+[2025-07-29 17:21:59] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26169
+[2025-07-29 17:21:59] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26170
+[2025-07-29 17:21:59] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26249
+[2025-07-29 17:21:59] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26250
+[2025-07-29 17:21:59] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26171
+[2025-07-29 17:21:59] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26172
+[2025-07-29 17:21:59] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26173
+[2025-07-29 17:22:00] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26174
+[2025-07-29 17:22:00] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26251
+[2025-07-29 17:22:00] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26252
+[2025-07-29 17:22:00] Start create event: CPU_ALL@check_cpu_usage
+[2025-07-29 17:22:00] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26253
+[2025-07-29 17:22:00] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26254
+[2025-07-29 17:22:00] Create event: CPU_ALL@check_cpu_usage successfully
+[2025-07-29 17:22:00] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26175
+[2025-07-29 17:22:01] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26176
+[2025-07-29 17:22:01] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26255
+[2025-07-29 17:22:01] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26256
+[2025-07-29 17:22:01] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26177
+[2025-07-29 17:22:01] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26178
+[2025-07-29 17:22:01] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26257
+[2025-07-29 17:22:01] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26258
+[2025-07-29 17:22:02] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26179
+[2025-07-29 17:22:02] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26259
+[2025-07-29 17:22:02] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26180
+[2025-07-29 17:22:02] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26181
+[2025-07-29 17:22:02] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26260
+[2025-07-29 17:22:02] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26261
+[2025-07-29 17:22:03] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26182
+[2025-07-29 17:22:03] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26262
+[2025-07-29 17:22:03] [zabbix-util.cpp->deleteTrigger()] Delete trigger successfully: triggerid=26183
+[2025-07-29 17:22:03] [zabbix-util.cpp->createTrigger()] Create trigger successfully: trigger_name='', trigger_id=26263
+[2025-08-01 10:32:51] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=34
+[2025-08-01 10:32:52] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754019171
+[2025-08-01 10:32:52] [zabbix-util.cpp->updateRegexp()] update regexp successfully: regexpid=34
+[2025-08-01 10:32:52] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754019171
+[2025-08-01 10:32:52] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=34
+[2025-08-01 11:27:08] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=37
+[2025-08-01 11:27:08] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754022428
+[2025-08-01 11:27:09] [zabbix-util.cpp->updateRegexp()] update regexp successfully: regexpid=37
+[2025-08-01 11:27:09] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754022428
+[2025-08-01 11:27:09] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=37
+[2025-08-01 11:29:44] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=38
+[2025-08-01 11:29:44] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754022584
+[2025-08-01 11:29:44] [zabbix-util.cpp->updateRegexp()] update regexp successfully: regexpid=38
+[2025-08-01 11:29:44] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754022584
+[2025-08-01 11:29:44] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=38
+[2025-08-01 11:32:17] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=39
+[2025-08-01 11:32:17] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754022737
+[2025-08-01 11:32:17] [zabbix-util.cpp->updateRegexp()] update regexp successfully: regexpid=39
+[2025-08-01 11:32:17] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754022737
+[2025-08-01 11:32:17] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=39
+[2025-08-01 11:34:00] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=40
+[2025-08-01 11:34:00] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754022840
+[2025-08-01 11:34:00] [zabbix-util.cpp->updateRegexp()] update regexp successfully: regexpid=40
+[2025-08-01 11:34:01] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754022840
+[2025-08-01 11:34:01] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=40
+[2025-08-01 11:36:26] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=41
+[2025-08-01 11:36:26] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754022986
+[2025-08-01 11:36:26] [zabbix-util.cpp->updateRegexp()] update regexp successfully: regexpid=41
+[2025-08-01 11:36:26] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754022986
+[2025-08-01 11:36:26] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=41
+[2025-08-01 11:38:38] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=42
+[2025-08-01 11:38:39] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754023118
+[2025-08-01 11:38:39] [zabbix-util.cpp->updateRegexp()] update regexp successfully: regexpid=42
+[2025-08-01 11:38:39] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754023118
+[2025-08-01 11:38:39] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=42
+[2025-08-01 13:31:30] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=43
+[2025-08-01 13:31:30] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754029890
+[2025-08-01 13:31:30] [zabbix-util.cpp->updateRegexp()] update regexp successfully: regexpid=43
+[2025-08-01 13:31:30] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754029890
+[2025-08-01 13:31:30] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=43
+[2025-08-01 13:33:30] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=44
+[2025-08-01 13:33:30] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754030010
+[2025-08-01 13:33:30] [zabbix-util.cpp->updateRegexp()] update regexp successfully: regexpid=44
+[2025-08-01 13:33:30] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754030010
+[2025-08-01 13:33:30] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=44
+[2025-08-01 13:35:08] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=45
+[2025-08-01 13:35:08] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754030108
+[2025-08-01 13:35:08] [zabbix-util.cpp->updateRegexp()] update regexp successfully: regexpid=45
+[2025-08-01 13:35:08] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754030108
+[2025-08-01 13:35:09] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=45
+[2025-08-01 15:44:24] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754037864, template_id=10771
+[2025-08-01 15:44:24] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754037864_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-01 15:44:24] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=46
+[2025-08-01 15:44:24] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754037864_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54234
+[2025-08-01 15:45:11] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754037911, template_id=10772
+[2025-08-01 15:45:11] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754037911_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-01 15:45:11] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=47
+[2025-08-01 15:45:12] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754037911_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54235
+[2025-08-01 15:48:58] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754038137, template_id=10773
+[2025-08-01 15:48:58] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754038137_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-01 15:48:58] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=48
+[2025-08-01 15:48:58] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754038137_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54236
+[2025-08-01 15:52:34] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754038354, template_id=10774
+[2025-08-01 15:52:34] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754038354_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-01 15:52:34] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=49
+[2025-08-01 15:52:35] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754038354_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54237
+[2025-08-01 15:52:47] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=50
+[2025-08-01 15:52:48] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754038367
+[2025-08-01 15:52:48] [zabbix-util.cpp->updateRegexp()] update regexp successfully: regexpid=50
+[2025-08-01 15:52:48] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754038367
+[2025-08-01 15:52:48] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=50
+[2025-08-01 16:11:44] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754039504, template_id=10775
+[2025-08-01 16:11:44] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754039504_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-01 16:11:44] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=51
+[2025-08-01 16:11:44] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754039504_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54238
+[2025-08-01 16:16:58] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754039817, template_id=10776
+[2025-08-01 16:16:58] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754039817_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-01 16:16:58] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=52
+[2025-08-01 16:16:58] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754039817_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54239
+[2025-08-01 16:23:20] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754040199, template_id=10777
+[2025-08-01 16:23:20] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754040199_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-01 16:23:20] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=53
+[2025-08-01 16:23:20] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754040199_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54240
+[2025-08-01 16:28:52] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754040532, template_id=10778
+[2025-08-01 16:28:53] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754040532_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-01 16:28:53] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=54
+[2025-08-01 16:28:53] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754040532_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54241
+[2025-08-01 16:30:50] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754040650, template_id=10779
+[2025-08-01 16:30:51] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754040650_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-01 16:30:51] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=55
+[2025-08-01 16:30:51] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754040650_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54242
+[2025-08-01 16:38:59] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754041139, template_id=10780
+[2025-08-01 16:38:59] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754041139_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-01 16:39:00] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=56
+[2025-08-01 16:39:00] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754041139_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54243
+[2025-08-01 16:41:37] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754041297, template_id=10781
+[2025-08-01 16:41:37] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754041297_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-01 16:41:37] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=57
+[2025-08-01 16:41:38] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754041297_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54244
+[2025-08-01 16:46:28] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754041588, template_id=10782
+[2025-08-01 16:46:28] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754041588_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-01 16:46:28] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=58
+[2025-08-01 16:46:28] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754041588_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54245
+[2025-08-08 16:30:12] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754645412, template_id=10783
+[2025-08-08 16:30:12] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754645412_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-08 16:30:12] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=59
+[2025-08-08 16:30:13] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754645412_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54850
+[2025-08-08 16:44:05] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754646245, template_id=10784
+[2025-08-08 16:44:05] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1754646245, template_id=10784
+[2025-08-08 16:53:36] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754646816, template_id=10785
+[2025-08-08 16:53:36] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754646816_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-08 16:53:36] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=60
+[2025-08-08 16:53:37] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754646816_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54851
+[2025-08-08 16:55:52] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754646952, template_id=10786
+[2025-08-08 16:55:53] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754646952_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-08 16:55:53] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=61
+[2025-08-08 16:55:53] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=62
+[2025-08-08 16:55:53] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1754646952, template_id=10786
+[2025-08-08 17:11:05] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754647865, template_id=10787
+[2025-08-08 17:11:05] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754647865_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-08 17:11:05] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=63
+[2025-08-08 17:11:09] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754647865_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54852
+[2025-08-08 17:11:09] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=64
+[2025-08-08 17:11:09] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754647865_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=54853
+[2025-08-08 17:11:09] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1754647865, template_id=10787
+[2025-08-08 17:12:58] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754647978, template_id=10788
+[2025-08-08 17:12:58] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754647978_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-08 17:12:58] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=65
+[2025-08-08 17:12:58] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754647978_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54854
+[2025-08-08 17:12:58] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=66
+[2025-08-08 17:12:59] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754647978_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=54855
+[2025-08-08 17:12:59] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1754647978, template_id=10788
+[2025-08-10 11:47:15] Create host fail: host_name=zabbix_host_test_01_1754801235
+[2025-08-10 11:48:30] Create host fail: host_name=zabbix_host_test_01_1754801310
+[2025-08-10 11:57:24] Create host fail: host_name=zabbix_host_test_01_1754801844
+[2025-08-10 12:01:06] Create host fail: host_name=zabbix_host_test_01_1754802065
+[2025-08-10 12:03:28] Create host fail: host_name=zabbix_host_test_01_1754802207
+[2025-08-10 12:04:31] Create host fail: host_name=zabbix_host_test_01_1754802271
+[2025-08-10 12:15:20] Create host fail: host_name=zabbix_host_test_01_1754802919
+[2025-08-10 12:22:59] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_01_1754803379
+[2025-08-10 13:12:56] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_01_1754806375
+[2025-08-11 13:48:58] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10808
+[2025-08-11 13:48:58] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10809
+[2025-08-11 13:48:58] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_01_1754894937
+[2025-08-11 13:56:20] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10810
+[2025-08-11 13:56:20] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10811
+[2025-08-11 13:56:20] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_01_1754895380
+[2025-08-11 14:00:23] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10812
+[2025-08-11 14:00:23] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10813
+[2025-08-11 14:00:24] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_01_1754895623
+[2025-08-11 14:07:29] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10814
+[2025-08-11 14:07:29] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10815
+[2025-08-11 14:07:29] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_01_1754896049
+[2025-08-11 14:07:29] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_02_1754896049
+[2025-08-11 14:14:49] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10816
+[2025-08-11 14:14:49] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10817
+[2025-08-11 14:14:50] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_01_1754896489
+[2025-08-11 14:14:50] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_02_1754896489
+[2025-08-11 14:28:21] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10818
+[2025-08-11 14:28:21] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10819
+[2025-08-11 14:28:21] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_01_1754897301
+[2025-08-11 14:28:21] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_02_1754897301
+[2025-08-11 14:29:15] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754897355, template_id=10820
+[2025-08-11 14:29:15] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754897355_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-11 14:29:15] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=67
+[2025-08-11 14:29:16] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754897355_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54856
+[2025-08-11 14:29:16] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=68
+[2025-08-11 14:29:16] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754897355_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=54857
+[2025-08-11 14:29:16] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1754897355, template_id=10820
+[2025-08-11 14:29:16] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=69
+[2025-08-11 14:29:16] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754897356
+[2025-08-11 14:29:16] [zabbix-util.cpp->updateRegexp()] update regexp successfully: regexpid=69
+[2025-08-11 14:29:17] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754897356
+[2025-08-11 14:29:17] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=69
+[2025-08-11 14:29:17] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10821
+[2025-08-11 14:29:17] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10822
+[2025-08-11 14:29:17] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_01_1754897357
+[2025-08-11 14:29:17] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_02_1754897357
+[2025-08-11 14:53:26] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754898806, template_id=10823
+[2025-08-11 14:53:26] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754898806_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-11 14:53:26] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=70
+[2025-08-11 14:53:26] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754898806_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54858
+[2025-08-11 14:53:26] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=71
+[2025-08-11 14:53:27] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754898806_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=54859
+[2025-08-11 14:53:27] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1754898806, template_id=10823
+[2025-08-11 14:53:27] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=72
+[2025-08-11 14:53:27] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754898807
+[2025-08-11 14:53:27] [zabbix-util.cpp->updateRegexp()] update regexp successfully: regexpid=72
+[2025-08-11 14:53:27] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754898807
+[2025-08-11 14:53:27] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=72
+[2025-08-11 14:53:27] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10824
+[2025-08-11 14:53:28] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10825
+[2025-08-11 14:53:28] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_01_1754898807
+[2025-08-11 14:53:28] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_02_1754898807
+[2025-08-11 14:53:28] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_01_1754898807
+[2025-08-11 14:53:28] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_02_1754898807
+[2025-08-11 14:53:28] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_01_1754898807
+[2025-08-11 14:53:28] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_02_1754898807
+[2025-08-11 14:55:38] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754898938, template_id=10826
+[2025-08-11 14:55:38] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754898938_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-11 14:55:38] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=73
+[2025-08-11 14:55:38] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754898938_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54860
+[2025-08-11 14:55:38] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=74
+[2025-08-11 14:55:39] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754898938_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=54861
+[2025-08-11 14:55:39] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1754898938, template_id=10826
+[2025-08-11 14:55:39] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=75
+[2025-08-11 14:55:39] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754898939
+[2025-08-11 14:55:39] [zabbix-util.cpp->updateRegexp()] update regexp successfully: regexpid=75
+[2025-08-11 14:55:39] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754898939
+[2025-08-11 14:55:39] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=75
+[2025-08-11 14:55:40] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10827
+[2025-08-11 14:55:40] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10828
+[2025-08-11 14:55:40] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_01_1754898939
+[2025-08-11 14:55:40] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_02_1754898939
+[2025-08-11 14:55:40] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_01_1754898939
+[2025-08-11 14:55:40] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_02_1754898939
+[2025-08-11 14:55:40] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_01_1754898939
+[2025-08-11 14:55:40] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_02_1754898939
+[2025-08-11 15:17:44] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754900264, template_id=10829
+[2025-08-11 15:18:25] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10830
+[2025-08-11 15:18:25] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10831
+[2025-08-11 15:18:25] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_01_1754900305
+[2025-08-11 15:18:25] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_02_1754900305
+[2025-08-11 15:18:25] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_01_1754900305
+[2025-08-11 15:18:25] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_02_1754900305
+[2025-08-11 15:18:25] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_01_1754900305
+[2025-08-11 15:18:26] [zabbix-util.cpp->getHost()]Get host successfully: host_name=zabbix_host_test_02_1754900305
+[2025-08-11 15:18:36] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=76
+[2025-08-11 15:18:36] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754900316
+[2025-08-11 15:18:36] [zabbix-util.cpp->updateRegexp()] update regexp successfully: regexpid=76
+[2025-08-11 15:18:36] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_util_test_regex_1754900316
+[2025-08-11 15:18:37] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=76
+[2025-08-11 15:18:46] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754900326, template_id=10832
+[2025-08-11 15:23:25] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754900604, template_id=10833
+[2025-08-11 15:23:25] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754900604_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-11 15:23:25] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=77
+[2025-08-11 15:23:25] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754900604_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54862
+[2025-08-11 15:23:25] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=78
+[2025-08-11 15:23:25] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754900604_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=54863
+[2025-08-11 15:23:25] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1754900604, template_id=10833
+[2025-08-11 15:28:52] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754900932, template_id=10834
+[2025-08-11 15:28:52] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754900932_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-11 15:28:52] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=79
+[2025-08-11 15:28:52] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754900932_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54864
+[2025-08-11 15:28:52] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=80
+[2025-08-11 15:28:52] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754900932_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=54865
+[2025-08-11 15:28:53] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1754900932, template_id=10834
+[2025-08-11 15:29:32] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_template_1754900972, template_id=10835
+[2025-08-11 15:29:32] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_template_1754900972_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-11 15:29:33] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=81
+[2025-08-11 15:29:33] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754900972_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54866
+[2025-08-11 15:29:33] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=82
+[2025-08-11 15:29:33] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_template_1754900972_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=54867
+[2025-08-11 15:29:33] [zabbix-util.cpp->deleteTemplate()] Delete template successfully: template_name=zabbix_test_template_1754900972, template_id=10835
+[2025-08-11 15:35:47] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_host_1754901347, template_id=10836
+[2025-08-11 15:35:47] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1754901347_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-11 15:35:47] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=83
+[2025-08-11 15:35:47] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1754901347_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54868
+[2025-08-11 15:35:47] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=84
+[2025-08-11 15:35:47] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1754901347_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=54869
+[2025-08-11 15:42:16] [zabbix-util.cpp->createTemplate()] Create template successfully: template_name=zabbix_test_host_1754901736, template_id=10837
+[2025-08-11 15:42:16] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1754901736_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-11 15:42:16] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=85
+[2025-08-11 15:42:17] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1754901736_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54870
+[2025-08-11 15:42:17] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=86
+[2025-08-11 15:42:17] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1754901736_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=54871
+[2025-08-11 15:53:27] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10838
+[2025-08-11 15:53:27] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1754902407_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-11 15:53:27] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=87
+[2025-08-11 15:53:28] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1754902407_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54872
+[2025-08-11 15:53:28] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=88
+[2025-08-11 15:53:28] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1754902407_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=54873
+[2025-08-11 15:57:06] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10839
+[2025-08-11 15:57:06] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1754902626_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-11 15:57:06] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=89
+[2025-08-11 15:57:06] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1754902626_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54874
+[2025-08-11 15:57:06] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=90
+[2025-08-11 15:57:07] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1754902626_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=54875
+[2025-08-11 16:28:35] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10840
+[2025-08-11 16:28:35] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1754904515_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-11 16:28:35] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=91
+[2025-08-11 16:28:36] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1754904515_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54876
+[2025-08-11 16:28:36] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=92
+[2025-08-11 16:28:36] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1754904515_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=54877
+[2025-08-11 16:39:25] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10841
+[2025-08-11 16:39:25] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1754905165_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-11 16:39:25] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=93
+[2025-08-11 16:39:25] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1754905165_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54878
+[2025-08-11 16:39:25] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=94
+[2025-08-11 16:39:26] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1754905165_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=54879
+[2025-08-11 16:42:31] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10842
+[2025-08-11 16:42:31] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1754905351_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-11 16:42:31] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=95
+[2025-08-11 16:42:31] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1754905351_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54880
+[2025-08-11 16:42:31] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=96
+[2025-08-11 16:42:31] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1754905351_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=54881
+[2025-08-11 16:56:33] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10843
+[2025-08-11 16:56:33] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1754906193_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-11 16:56:33] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=97
+[2025-08-11 16:56:34] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1754906193_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54882
+[2025-08-11 16:56:34] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=98
+[2025-08-11 16:56:34] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1754906193_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=54883
+[2025-08-11 17:03:13] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10844
+[2025-08-11 17:03:13] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1754906593_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-11 17:03:13] [zabbix-util.cpp->createRegexp()] create regexp fail 
+[2025-08-11 17:05:43] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10845
+[2025-08-11 17:05:44] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1754906743_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-11 17:05:44] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=99
+[2025-08-11 17:05:44] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1754906743_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54884
+[2025-08-11 17:05:44] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=100
+[2025-08-11 17:05:44] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1754906743_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=54885
+[2025-08-11 17:28:57] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10846
+[2025-08-11 17:28:57] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1754908137_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-11 17:28:57] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=101
+[2025-08-11 17:28:57] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1754908137_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=54886
+[2025-08-11 17:28:57] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=102
+[2025-08-11 17:28:57] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1754908137_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=54887
+[2025-08-11 17:43:27] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10847
+[2025-08-11 17:43:27] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1754909007_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-11 17:43:27] [zabbix-util.cpp->createRegexp()] create regexp fail 
+[2025-08-20 15:54:06] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10849
+[2025-08-20 15:54:06] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755680046_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 15:54:06] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=103
+[2025-08-20 15:54:06] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755680046_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55645
+[2025-08-20 15:54:07] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=104
+[2025-08-20 15:54:07] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755680046_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55646
+[2025-08-20 15:55:30] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10850
+[2025-08-20 15:55:30] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755680130_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 15:55:30] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=105
+[2025-08-20 15:55:30] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755680130_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55647
+[2025-08-20 15:55:30] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=106
+[2025-08-20 15:55:31] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755680130_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55648
+[2025-08-20 16:00:28] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10851
+[2025-08-20 16:00:28] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755680428_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 16:00:28] [zabbix-util.cpp->createRegexp()] create regexp fail 
+[2025-08-20 16:02:36] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10852
+[2025-08-20 16:02:36] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755680556_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 16:02:36] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=107
+[2025-08-20 16:02:36] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755680556_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55649
+[2025-08-20 16:02:37] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=108
+[2025-08-20 16:02:37] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755680556_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55650
+[2025-08-20 16:11:22] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10853
+[2025-08-20 16:11:22] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755681082_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 16:11:22] [zabbix-util.cpp->createRegexp()] create regexp fail 
+[2025-08-20 16:12:02] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10854
+[2025-08-20 16:12:02] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755681122_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 16:12:02] [zabbix-util.cpp->createRegexp()] create regexp fail 
+[2025-08-20 16:12:58] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10855
+[2025-08-20 16:12:58] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755681177_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 16:12:58] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=109
+[2025-08-20 16:12:58] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755681177_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55651
+[2025-08-20 16:12:58] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=110
+[2025-08-20 16:12:58] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755681177_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55652
+[2025-08-20 16:14:09] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10856
+[2025-08-20 16:14:09] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755681249_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 16:14:09] [zabbix-util.cpp->createRegexp()] create regexp fail 
+[2025-08-20 16:15:03] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10857
+[2025-08-20 16:15:03] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755681303_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 16:15:03] [zabbix-util.cpp->createRegexp()] create regexp fail 
+[2025-08-20 16:15:49] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10858
+[2025-08-20 16:15:50] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755681349_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 16:15:50] [zabbix-util.cpp->createRegexp()] create regexp fail 
+[2025-08-20 16:19:12] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10859
+[2025-08-20 16:19:12] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755681552_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 16:19:12] [zabbix-util.cpp->createRegexp()] create regexp fail 
+[2025-08-20 16:20:44] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10860
+[2025-08-20 16:20:44] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755681644_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 16:20:44] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=111
+[2025-08-20 16:20:44] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755681644_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55653
+[2025-08-20 16:20:44] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=112
+[2025-08-20 16:20:45] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755681644_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55654
+[2025-08-20 16:23:15] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10861
+[2025-08-20 16:23:16] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755681795_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 16:23:16] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=113
+[2025-08-20 16:23:16] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755681795_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55655
+[2025-08-20 16:23:16] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=114
+[2025-08-20 16:23:16] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755681795_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55656
+[2025-08-20 16:27:30] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10862
+[2025-08-20 16:27:31] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755682050_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 16:27:31] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=115
+[2025-08-20 16:27:31] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755682050_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55657
+[2025-08-20 16:27:31] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=116
+[2025-08-20 16:27:31] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755682050_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55658
+[2025-08-20 17:12:51] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10863
+[2025-08-20 17:12:51] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755684771_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 17:12:51] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=117
+[2025-08-20 17:12:51] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755684771_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55659
+[2025-08-20 17:12:51] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=118
+[2025-08-20 17:12:51] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755684771_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55660
+[2025-08-20 17:14:41] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10864
+[2025-08-20 17:14:42] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755684881_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 17:14:42] [zabbix-util.cpp->createRegexp()] create regexp fail 
+[2025-08-20 17:15:20] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10865
+[2025-08-20 17:15:20] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755684920_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 17:15:20] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=119
+[2025-08-20 17:15:20] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755684920_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55661
+[2025-08-20 17:15:20] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=120
+[2025-08-20 17:15:21] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755684920_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55662
+[2025-08-20 17:18:21] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10866
+[2025-08-20 17:18:21] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755685101_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 17:18:21] [zabbix-util.cpp->createRegexp()] create regexp fail 
+[2025-08-20 17:18:50] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10867
+[2025-08-20 17:18:50] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755685130_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 17:18:50] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=121
+[2025-08-20 17:18:50] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755685130_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55663
+[2025-08-20 17:18:50] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=122
+[2025-08-20 17:18:50] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755685130_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55664
+[2025-08-20 17:19:24] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10868
+[2025-08-20 17:19:24] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755685164_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 17:19:24] [zabbix-util.cpp->createRegexp()] create regexp fail 
+[2025-08-20 17:21:48] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10869
+[2025-08-20 17:21:48] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755685308_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 17:21:49] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=123
+[2025-08-20 17:21:49] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755685308_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55665
+[2025-08-20 17:21:49] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=124
+[2025-08-20 17:21:49] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755685308_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55666
+[2025-08-20 17:23:09] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10870
+[2025-08-20 17:23:09] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755685388_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 17:23:09] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=125
+[2025-08-20 17:23:09] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755685388_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55667
+[2025-08-20 17:23:09] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=126
+[2025-08-20 17:23:09] [zabbix-util.cpp->createItem()] Create item successfully: item_name=zabbix_test_host_1755685388_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55668
+[2025-08-20 17:24:03] [zabbix-util.cpp->createHost()]Create host successfully: hostid=10871
+[2025-08-20 17:24:03] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=zabbix_test_host_1755685443_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 17:24:03] [zabbix-util.cpp->createRegexp()] create regexp fail 
+[2025-08-20 21:24:59] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-08-20 21:24:59] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-08-20 21:24:59] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-08-20 21:24:59] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-08-20 21:24:59] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-08-20 21:24:59] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-08-20 21:24:59] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-08-20 21:24:59] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-08-20 21:24:59] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 21:24:59] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=127
+[2025-08-20 21:28:23] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-08-20 21:28:23] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-08-20 21:28:23] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-08-20 21:28:23] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-08-20 21:28:23] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-08-20 21:28:23] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-08-20 21:28:23] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-08-20 21:28:23] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-08-20 21:28:23] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 21:28:23] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=127
+[2025-08-20 21:28:23] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=128
+[2025-08-20 21:30:37] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-08-20 21:30:37] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-08-20 21:30:37] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-08-20 21:30:37] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-08-20 21:30:37] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-08-20 21:30:37] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-08-20 21:30:37] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-08-20 21:30:37] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-08-20 21:30:38] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 21:30:38] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=128
+[2025-08-20 21:30:39] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=129
+[2025-08-20 21:53:43] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-08-20 21:53:43] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-08-20 21:53:43] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-08-20 21:53:43] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-08-20 21:53:43] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-08-20 21:53:43] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-08-20 21:53:43] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-08-20 21:53:43] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-08-20 21:53:43] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 21:53:43] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=129
+[2025-08-20 21:53:43] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=130
+[2025-08-20 21:56:56] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-08-20 21:56:56] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-08-20 21:56:56] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-08-20 21:56:56] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-08-20 21:56:56] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-08-20 21:56:56] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-08-20 21:56:56] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-08-20 21:56:56] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-08-20 21:56:57] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 21:56:57] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=130
+[2025-08-20 21:56:57] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=131
+[2025-08-20 22:05:49] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-08-20 22:05:49] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-08-20 22:05:49] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-08-20 22:05:49] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-08-20 22:05:49] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-08-20 22:05:49] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-08-20 22:05:49] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-08-20 22:05:49] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-08-20 22:05:49] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:05:50] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=131
+[2025-08-20 22:05:51] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=132
+[2025-08-20 22:13:23] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-08-20 22:13:23] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-08-20 22:13:23] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-08-20 22:13:23] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-08-20 22:13:23] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-08-20 22:13:23] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-08-20 22:13:23] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-08-20 22:13:23] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-08-20 22:13:23] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:13:24] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=132
+[2025-08-20 22:13:24] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=133
+[2025-08-20 22:15:44] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-08-20 22:15:44] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-08-20 22:15:44] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-08-20 22:15:44] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-08-20 22:15:44] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-08-20 22:15:44] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-08-20 22:15:45] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-08-20 22:15:45] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-08-20 22:15:45] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:15:45] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=133
+[2025-08-20 22:15:45] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=134
+[2025-08-20 22:16:38] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-08-20 22:16:38] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-08-20 22:16:38] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-08-20 22:16:38] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-08-20 22:16:39] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-08-20 22:16:39] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-08-20 22:16:39] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-08-20 22:16:39] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-08-20 22:16:39] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:16:39] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=134
+[2025-08-20 22:16:39] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=135
+[2025-08-20 22:17:19] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-08-20 22:17:19] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-08-20 22:17:19] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-08-20 22:17:19] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-08-20 22:17:19] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-08-20 22:17:19] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-08-20 22:17:20] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-08-20 22:17:20] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-08-20 22:17:20] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:17:20] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=136
+[2025-08-20 22:17:20] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55669
+[2025-08-20 22:17:20] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=137
+[2025-08-20 22:17:20] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55670
+[2025-08-20 22:17:20] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host01_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:17:20] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=138
+[2025-08-20 22:17:20] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host01_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55671
+[2025-08-20 22:17:20] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=139
+[2025-08-20 22:17:20] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host01_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55672
+[2025-08-20 22:17:20] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host02_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:17:21] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=140
+[2025-08-20 22:17:21] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host02_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55673
+[2025-08-20 22:17:21] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=141
+[2025-08-20 22:17:21] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host02_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55674
+[2025-08-20 22:17:21] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host03_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:17:21] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=142
+[2025-08-20 22:17:21] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host03_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55675
+[2025-08-20 22:17:21] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=143
+[2025-08-20 22:17:21] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host03_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55676
+[2025-08-20 22:20:02] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-08-20 22:20:02] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-08-20 22:20:02] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-08-20 22:20:02] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-08-20 22:20:02] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-08-20 22:20:02] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-08-20 22:20:02] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-08-20 22:20:02] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-08-20 22:20:02] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:20:02] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=136
+[2025-08-20 22:20:02] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=137
+[2025-08-20 22:20:02] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=144
+[2025-08-20 22:20:03] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55677
+[2025-08-20 22:20:04] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=145
+[2025-08-20 22:20:04] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55678
+[2025-08-20 22:20:04] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host01_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:20:04] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=138
+[2025-08-20 22:20:04] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=139
+[2025-08-20 22:20:04] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=146
+[2025-08-20 22:20:04] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host01_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55679
+[2025-08-20 22:20:04] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=147
+[2025-08-20 22:20:06] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host01_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55680
+[2025-08-20 22:20:06] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host02_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:20:06] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=140
+[2025-08-20 22:20:06] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=141
+[2025-08-20 22:20:06] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=148
+[2025-08-20 22:20:06] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host02_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55681
+[2025-08-20 22:20:06] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=149
+[2025-08-20 22:20:07] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host02_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55682
+[2025-08-20 22:20:07] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host03_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:20:07] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=142
+[2025-08-20 22:20:07] [zabbix-util.cpp->deleteRegexp()] delete regexp successfully: regexpid=143
+[2025-08-20 22:20:08] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=150
+[2025-08-20 22:20:09] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host03_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55683
+[2025-08-20 22:20:09] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=151
+[2025-08-20 22:20:09] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host03_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55684
+[2025-08-20 22:25:00] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-08-20 22:25:00] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-08-20 22:25:01] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-08-20 22:25:01] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-08-20 22:25:01] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-08-20 22:25:01] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-08-20 22:25:01] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-08-20 22:25:01] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-08-20 22:25:01] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:25:01] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=152
+[2025-08-20 22:25:02] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55685
+[2025-08-20 22:25:03] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=153
+[2025-08-20 22:25:03] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55686
+[2025-08-20 22:25:03] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host01_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:25:03] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=154
+[2025-08-20 22:25:04] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host01_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55687
+[2025-08-20 22:25:04] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=155
+[2025-08-20 22:25:04] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host01_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55688
+[2025-08-20 22:25:04] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host02_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:25:04] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=156
+[2025-08-20 22:25:04] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host02_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55689
+[2025-08-20 22:25:04] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=157
+[2025-08-20 22:25:04] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host02_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55690
+[2025-08-20 22:25:04] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host03_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:25:04] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=158
+[2025-08-20 22:25:05] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host03_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55691
+[2025-08-20 22:25:05] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=159
+[2025-08-20 22:25:05] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host03_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55692
+[2025-08-20 22:30:44] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-08-20 22:30:44] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-08-20 22:30:45] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-08-20 22:30:45] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-08-20 22:30:45] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-08-20 22:30:45] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-08-20 22:30:45] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-08-20 22:30:45] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-08-20 22:30:45] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:30:45] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host01_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:30:45] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host02_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:30:45] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host03_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:33:55] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-08-20 22:33:55] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-08-20 22:33:55] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-08-20 22:33:55] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-08-20 22:33:55] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-08-20 22:33:55] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-08-20 22:33:55] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-08-20 22:33:55] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-08-20 22:33:55] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:33:55] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host01_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:33:55] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host02_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:33:55] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host03_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:35:34] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host
+[2025-08-20 22:35:34] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host, ip_addr=127.0.0.1 and host_id=10629
+[2025-08-20 22:35:35] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host01
+[2025-08-20 22:35:35] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host01, ip_addr=128.123.100.12 and host_id=10657
+[2025-08-20 22:35:35] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host02
+[2025-08-20 22:35:35] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host02, ip_addr=100.0.10.12 and host_id=10670
+[2025-08-20 22:35:35] [zabbix-util.cpp->getHost()]Get host successfully: host_name=fake_dh.hung_Linux_host03
+[2025-08-20 22:35:35] [zabbix-util.cpp->findHost()] Found host with: host_name=fake_dh.hung_Linux_host03, ip_addr=172.184.112.224 and host_id=10658
+[2025-08-20 22:35:35] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:35:35] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=160
+[2025-08-20 22:35:35] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55693
+[2025-08-20 22:35:35] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=161
+[2025-08-20 22:35:35] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55694
+[2025-08-20 22:35:35] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host01_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:35:35] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=162
+[2025-08-20 22:35:35] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host01_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55695
+[2025-08-20 22:35:36] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=163
+[2025-08-20 22:35:36] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host01_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55696
+[2025-08-20 22:35:36] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host02_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:35:36] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=164
+[2025-08-20 22:35:36] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host02_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55697
+[2025-08-20 22:35:36] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=165
+[2025-08-20 22:35:36] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host02_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55698
+[2025-08-20 22:35:36] [zabbix-util.cpp->getRegexp()] get regexp successfully: name=fake_dh.hung_Linux_host03_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd
+[2025-08-20 22:35:36] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=166
+[2025-08-20 22:35:36] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host03_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_warning, item_id=55699
+[2025-08-20 22:35:36] [zabbix-util.cpp->createRegexp()] create regexp successfully: regexpid=167
+[2025-08-20 22:35:37] [zabbix-util.cpp->createItem()] Create item successfully: item_name=fake_dh.hung_Linux_host03_-log-test_log-test_zabbix_log_file_mntr.log_e92cb2fd_critical, item_id=55700

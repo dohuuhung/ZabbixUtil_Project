@@ -1,0 +1,5 @@
+hosts:
+  - name: zabbix_host_test_01
+    interface: "1"
+  - name: zabbix_host_test_02
+    interface: "2"

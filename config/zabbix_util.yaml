@@ -1,10 +1,12 @@
 default_config:
   default_host_group: global_group
   log_file: zabbix_util.log
+  regex_format: "^.*{}.*"
+  log_item_key: "log[{},@{},,,skip,]"
 
 zabbix_masters:
   - zone_name: PSKRW1
-    host: 171.245.58.139
+    host: 27.72.232.43
     port: 3532
     ssl: false
     user: dh.hung

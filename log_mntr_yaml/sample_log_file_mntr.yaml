@@ -1,0 +1,30 @@
+log_file_path: /log/test_log/test_zabbix_log_file_mntr.log
+event_name: check_log
+cycle_check: 10s
+regex_format: "^.*{}.*"
+log_item_key: "log[{},@{},,,skip,]"
+case_sensitive: 1
+
+levels:
+  - priority: 2
+    match_patterns: 
+      - '[E|e][R|r][R|r][O|o][R|r]'
+      - '[W|w][A|a][R|r][N|n][I|i][N|n][G|g]'
+      - 'Interface down"'
+      - 'Interface down\'
+      - 'Interface down\n'
+      - 'Interface down\b'
+      - 'Interface down\f'
+      - 'Interface down\r'
+      - 'Interface down\t'
+      - 'Root expired'
+    skip_patterns:
+      - 'Error5100'
+      - 'Test Interface down'
+  - priority: 3
+    match_patterns:
+      - 'Serious'
+      - '[D|d][O|o][W|w][N|n]'
+      - 'Offline'
+    skip_patterns:
+      - 'Offline test interface'

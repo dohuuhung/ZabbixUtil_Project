@@ -4,18 +4,18 @@
 update_mode: 1
 
 items:
-  - name: icmp_ping
-    key_: icmppingloss[,3,1000,32,2000]
+  - name: check_ntp_timegap
+    key_: system.localtime
     type: 7
     delay: 60s                   # delay value is interval time of collecting data from target device
     status: 0                    # 0(default): enable item, 1: disable item
     value_type: 0
 
 events:
-  - description: Check icmp ping
-    event_name: check_icmp_ping
+  - description: Check NTP time gap
+    event_name: MXSC_NTP@check_ntp_timegap
     triggers:
-      - expression: last({0}/icmppingloss[,3,1000,32,2000])=100
-        priority: 4                # 0: not classified, 1: information, 2: warning, 3: average, 4: high, 5: disaster
+      - expression: fuzzytime(/{0}/system.localtime,1)=0
+        priority: 2                # 0: not classified, 1: information, 2: warning, 3: average, 4: high, 5: disaster
         status: 0                  # Whether the trigger is enabled or disabled. 0: enabled, 1: disabled.
         type: 0                    # 0: (default) do not generate multiple events, 1: generate multiple events

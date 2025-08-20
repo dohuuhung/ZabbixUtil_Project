@@ -15,6 +15,7 @@
                 "logger.cpp",
                 "zabbix_util.cpp",
                 "test.cpp",
+                "md5.cpp",
                 "lib/libyaml-cpp.a",
                 "lib/libfmt.a",
                 "lib/libcurl.a",

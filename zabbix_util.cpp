@@ -34,6 +34,8 @@ string getExecutableDirectory() {
 
 const int API_RETRY_TIME = 2;
 const string SUPPORT_ITEM_KEY_FILE = getExecutableDirectory() + "\\config\\zabbix_supported_item_key.txt";
+const string DEFAULT_REGEX_FORMAT = "^.*{0}.*";
+const string DEFAULT_LOG_ITEM_KEY = "log[{},@{},,,skip,]";
 typedef unordered_map<string, string> zinterface;
 
 typedef pair<string, string> Credentials;
@@ -78,6 +80,34 @@ const unordered_map<string, int> REGEX_EXPRESSION_VALUE_TYPE_MAP = {
 	{"case_sensitive", 0}
 };
 
+const unordered_map<int, string> PRIORITY_LEVEL_MAP = {
+	{2, "warning"},
+	{3, "critical"},
+	{4, "fatal"}
+};
+
+bool check_exist_yaml_key(YAML::Node& root, vector<pair<int, string>>& keys, string yaml_file) {
+    // If any key of vector keys doesn't exist or has empty value,
+    // this function will throw a logic exception
+    // Otherwise, true will be return if every key of vector keys exists and has value
+    // pair<int, string>: first int define type of key
+    // 0: value key
+    // 1: block key
+    for (auto key : keys) {
+        bool check = true;
+        if (key.first == 0) {
+            if (!root[key.second] || root[key.second].as<string>().empty()) check = false;
+        } else if (key.first == 1) {
+            if (!root[key.second] || (root["hosts"].IsSequence() && root["hosts"].size() == 0)) check = false;
+        }
+        if (!check) {
+            if (yaml_file.empty()) throw std::logic_error("Key \"" + key.second + "\" not exist or has empty value");
+            throw std::logic_error("Key \"" + key.second + "\" not exist or has empty value in file " + yaml_file);
+        }
+    }
+    return true;
+}
+
 string getEpochTimeString() {
     auto now = std::chrono::system_clock::now();
     auto epoch_seconds = std::chrono::duration_cast<std::chrono::seconds>(
@@ -85,6 +115,45 @@ string getEpochTimeString() {
     ).count();
 
     return to_string(epoch_seconds);
+}
+
+string replaceSlashes(const string& path) {
+    string result = path;
+    replace(result.begin(), result.end(), '/', '-');
+    replace(result.begin(), result.end(), '\\', '-');
+    return result;
+}
+
+string escape_json_string(const string& input) {
+    string output;
+    output.reserve(input.size() * 2);
+
+    for (char c : input) {
+        switch (c) {
+            case '\"': output += "\\\""; break;
+            case '\\': output += "\\\\"; break;
+            case '\b': output += "\\\\b"; break;
+            case '\f': output += "\\\\f"; break;
+            case '\n': output += "\\\\n"; break;
+            case '\r': output += "\\\\r"; break;
+            case '\t': output += "\\\\t"; break;
+            default:
+                if (static_cast<unsigned char>(c) < 0x20) {
+                    // escape control char dưới 0x20 thành \u00XX
+                    char buf[7];
+                    snprintf(buf, sizeof(buf), "\\u%04x", c);
+                    output += buf;
+                } else {
+                    output += c;
+                }
+        }
+    }
+    return output;
+}
+
+bool stringContains(string a, string b) {
+	// check if string b contains string a?
+	return b.find(a) != string::npos;
 }
 
 string makeKeyValueStr(string k, string v, int value_type) {
@@ -329,9 +398,17 @@ vector<ZabbixContext> parseZabbixUtilConf(string conf_file) {
     
     string default_host_group = "";
     string log_file = "";
+	string regex_format = "";
+	string log_item_key = "";
     if (root["default_config"]) {
     	default_host_group = root["default_config"]["default_host_group"].as<std::string>();
     	log_file = root["default_config"]["log_file"].as<std::string>();
+		if (root["default_config"]["regex_format"] && !root["default_config"]["regex_format"].as<string>().empty()) {
+			regex_format = root["default_config"]["regex_format"].as<std::string>();
+		}
+		if (root["default_config"]["log_item_key"] && !root["default_config"]["log_item_key"].as<string>().empty()) {
+			log_item_key = root["default_config"]["log_item_key"].as<std::string>();
+		}
 	}
 	
 	if (root["zabbix_masters"]) {
@@ -347,6 +424,8 @@ vector<ZabbixContext> parseZabbixUtilConf(string conf_file) {
 			ZabbixContext zc = ZabbixContext(zone_name, host, port, ssl, make_pair(user, password));
 			zc.update_mntr_cfg("default_host_group", default_host_group);
 			zc.common_cfg["log_file"] = log_file;
+			if (!regex_format.empty()) zc.common_cfg["regex_format"] = regex_format;
+			if (!log_item_key.empty()) zc.common_cfg["log_item_key"] = log_item_key;
 
 			std::ifstream infile(SUPPORT_ITEM_KEY_FILE);
             std::string line;
@@ -516,6 +595,42 @@ int createHostGroup(string group_name, ZabbixContext& zcontext) {
     }
 }
 
+// API host.create
+int createHost(ZabbixHost zh, ZabbixContext& zcontext) {
+	// return hostid if create successfully, return -1 if create failed
+	// Current only create host with input as hostname
+	// TODO: create host with more input paramters(group, template, macros,...)
+	string log_file = zcontext.common_cfg["log_file"];
+	string jsonData = R"(
+	{{
+		"jsonrpc": "2.0",
+		"method": "host.create",
+		"params": {{
+			"host": "{}",
+			"groups": [
+                {{
+                    "groupid": "{}"
+                }}
+            ]
+        }},
+		"auth": "{}",
+		"id": 1
+    }}
+	)";
+	jsonData = fmt::format(jsonData, zh.host_name, zh.host_conf["groupid"], zcontext.get_auth_token());
+	string response = callZabbixAPI(zcontext, jsonData);
+	json response_json = json::parse(response);
+    if (response_json["result"].contains("hostids")) {
+		int hostid = stoi(response_json["result"]["hostids"][0].get<std::string>());
+        writeLog(log_file, "[zabbix-util.cpp->createHost()]Create host successfully: hostid=" + to_string(hostid) + "\n");
+        return hostid;
+    } else {
+    	writeLog(log_file, "Create host fail: host_name=" + zh.host_name + "\n");
+        cerr << "Create failed. Full response:\n" << response_json.dump(2) << endl;
+        return -1;
+    }
+}
+
 // API host.get
 vector<ZabbixHost> getHost(string host_name, ZabbixContext& zcontext) {
 	// return vector<ZabbixHost>
@@ -564,6 +679,37 @@ vector<ZabbixHost> getHost(string host_name, ZabbixContext& zcontext) {
         cerr << "Get failed. Full response:\n" << response_json.dump(2) << endl;
         return zhv;
     }
+}
+
+// API host.delete
+int deleteHost(ZabbixHost zh, ZabbixContext& zcontext) {
+	// return 0 if delete successfully
+	// return 1 if delete failed
+	string log_file = zcontext.common_cfg["log_file"];
+	string jsonData = R"(
+	{{
+		"jsonrpc": "2.0",
+		"method": "host.delete",
+		"params": [
+			"{}"
+		],
+		"auth": "{}",
+		"id": 1
+    }}
+	)";
+	jsonData = fmt::format(jsonData, zh.host_id, zcontext.get_auth_token());
+	string response = callZabbixAPI(zcontext, jsonData);
+	json response_json = json::parse(response);
+    if (response_json["result"].contains("hostids")) {
+    	string deleted_host_id = response_json["result"]["hostids"][0].get<std::string>();
+		if (deleted_host_id == zh.host_id) {
+			writeLog(log_file, "[zabbix-util.cpp->getHost()]Get host successfully: host_name=" + zh.host_name + "\n");
+            return 0;
+		}
+	}
+	writeLog(log_file, "Get host fail: host_name=" + zh.host_name + "\n");
+	cerr << "Get failed. Full response:\n" << response_json.dump(2) << endl;
+	return 1;
 }
 
 ZabbixHost findHost(string host_name, string ip_addr, ZabbixContext& zcontext) {
@@ -1029,7 +1175,6 @@ int updateTrigger(string triggerid, ZabbixTrigger trigger_update, ZabbixContext&
 	for (auto it = trigger_update.trigger_conf.begin(); it != trigger_update.trigger_conf.end(); ++it) {
 		string k = it->first;
 		string v = it->second;
-//		cout << "DEBUG DH.HUNG: " << k << ": " << v << endl;
 		if (k == "triggerid") continue;
 		if (ZTRIGGER_VALUE_TYPE_MAP.find(k) != ZTRIGGER_VALUE_TYPE_MAP.end()) {
 			if (k == "desc") {
@@ -1042,7 +1187,6 @@ int updateTrigger(string triggerid, ZabbixTrigger trigger_update, ZabbixContext&
 		}
 	}
 	jsonData = fmt::format(jsonData, triggerid, update_str, zcontext.get_auth_token());
-//	cout << "DEBUG DH.HUNG: [zabbix-util.cpp->updateTrigger()] jsonData=" << jsonData << endl;
 	string response = callZabbixAPI(zcontext, jsonData);
 	json response_json = json::parse(response);
     if (response_json.contains("result")) {
@@ -1355,7 +1499,8 @@ int createRegexp(ZabbixRegex zr, ZabbixContext& zcontext) {
 		param_str += "," + makeKeyValueStr("test_string", zr.test_string, REGEX_EXPRESSION_VALUE_TYPE_MAP.at("test_string"));
 	}
 	string expressions_str = zr.genExpressionsStr();
-	param_str += "," + makeKeyValueStr("expressions", expressions_str, REGEX_EXPRESSION_VALUE_TYPE_MAP.at("expressions"));
+	param_str += "," + makeKeyValueStr("expressions", expressions_str,
+		                               REGEX_EXPRESSION_VALUE_TYPE_MAP.at("expressions"));
 
 	jsonData = fmt::format(jsonData, zr.name, param_str, zcontext.get_auth_token());
 	string response = callZabbixAPI(zcontext, jsonData);
@@ -1401,8 +1546,8 @@ int deleteRegexp(ZabbixRegex zr, ZabbixContext& zcontext) {
 }
 
 // API regexp.get
-ZabbixRegex getRegexp(ZabbixContext& zcontext, string name) {
-	ZabbixRegex zr = ZabbixRegex("");
+vector<ZabbixRegex> getRegexp(ZabbixContext& zcontext, string name) {
+	vector<ZabbixRegex> vzr;
 	string log_file = zcontext.common_cfg["log_file"];
 	string jsonData = R"(
 	{{
@@ -1430,19 +1575,19 @@ ZabbixRegex getRegexp(ZabbixContext& zcontext, string name) {
 		writeLog(log_file, "[zabbix-util.cpp->getRegexp()] get regexp successfully: name=" + name + "\n");
 		for (auto regexp : response_json["result"]) {
 			string _name = regexp["name"].get<std::string>();
-			if (!name.empty() && (name != _name)) continue;
-			zr.name = _name;
+			if (!name.empty() && !stringContains(name, _name)) continue;
+			ZabbixRegex zr = ZabbixRegex(_name);
 			zr.regexpid = regexp["regexpid"].get<std::string>();
 			for (auto expression : regexp["expressions"]) {
 				zr.expressions.push_back(parseJsonItem(expression));
 			}
-			break;
+			vzr.push_back(zr);
 		}
-		return zr;
+		return vzr;
     } else {
     	writeLog(log_file, "[zabbix-util.cpp->getRegexp()] get regexp fail: name=" + name + "\n");
         cerr << "Get failed. Full response:\n" << response_json.dump(2) << endl;
-        return zr;
+        return vzr;
     }
 }
 
@@ -1475,4 +1620,149 @@ int updateRegexp(ZabbixRegex update_zr, ZabbixContext& zcontext) {
         cerr << "Update failed. Full response:\n" << response_json.dump(2) << endl;
         return -1;
     }
+}
+
+ZabbixLogFileMntr::ZabbixLogFileMntr(string lfp) {
+	this->log_file_path = lfp;
+}
+
+ZabbixLogFileMntr parseLogFileMntrYaml(string log_file_mntr_yaml) {
+	YAML::Node root;
+    try{
+        root = loadYamlFile(log_file_mntr_yaml);
+    }
+    catch(const std::exception& e){
+	    throw std::logic_error("Error parsing log file monitoring yaml file: " + log_file_mntr_yaml);
+    }
+
+	try {
+        vector<pair<int, string>> keys;
+        keys.push_back(make_pair(0, "log_file_path"));
+        keys.push_back(make_pair(0, "event_name"));
+        keys.push_back(make_pair(0, "cycle_check"));
+        keys.push_back(make_pair(0, "regex_format"));
+        keys.push_back(make_pair(0, "log_item_key"));
+        check_exist_yaml_key(root, keys, log_file_mntr_yaml);
+        keys.clear();
+        keys.push_back(make_pair(1, "levels"));
+		check_exist_yaml_key(root, keys, log_file_mntr_yaml);
+        keys.clear();
+        keys.push_back(make_pair(0, "priority"));
+        keys.push_back(make_pair(1, "match_patterns"));
+        for (auto level : root["levels"]) {
+            check_exist_yaml_key(level, keys, log_file_mntr_yaml);
+        }
+    } catch (const std::exception& e) {
+        throw;
+    }
+
+	string case_sensitive = "1";
+	if (root["case_sensitive"] && !root["case_sensitive"].as<string>().empty()) {
+		case_sensitive = root["case_sensitive"].as<string>();
+	}
+	
+	string log_file_path = root["log_file_path"].as<string>();
+	string event_name = root["event_name"].as<string>();
+	ZabbixLogFileMntr zlfm = ZabbixLogFileMntr(log_file_path);
+	zlfm.event_name = event_name;
+	if (root["regex_format"] && !root["regex_format"].as<string>().empty()) {
+		zlfm.regex_format = root["regex_format"].as<string>();
+	}
+	if (root["log_item_key"] && !root["log_item_key"].as<string>().empty()) {
+		zlfm.log_item_key = root["log_item_key"].as<string>();
+	}
+	zlfm.cycle_check = "15s";
+	if (root["cycle_check"] && !root["cycle_check"].as<string>().empty()) {
+		zlfm.cycle_check = root["cycle_check"].as<string>();
+	}
+	for (auto level : root["levels"]) {
+		if (!level["priority"] || level["priority"].as<string>().empty()) {
+			throw std::logic_error("Field \"priority\" not exist or empty in log file monitoring yaml file: " + log_file_mntr_yaml+ ". Please check yaml file again.");
+		}
+		if (!level["match_patterns"] || level["match_patterns"].size() == 0) {
+			throw std::logic_error("Field \"match_patterns\" not exist or empty in log file monitoring yaml file: " + log_file_mntr_yaml+ ". Please check yaml file again.");
+		}
+		if (!level["skip_patterns"]) {
+			throw std::logic_error("Field \"skip_patterns\" not exist in log file monitoring yaml file: " + log_file_mntr_yaml+ ". Please check yaml file again.");
+		}
+		int priority = level["priority"].as<int>();
+		ZabbixRegex zr = ZabbixRegex(replaceSlashes(log_file_path) + "_"
+		                             + md5Last8(log_file_path) + "_"
+									 + PRIORITY_LEVEL_MAP.at(priority));
+		for (auto pattern : level["match_patterns"]) {
+			RegexExpression re;
+			re["expression"] = pattern.as<string>();
+			re["expression"] = escape_json_string(re["expression"]);
+			re["expression_type"] = "3";
+			re["case_sensitive"] = case_sensitive;
+			zr.expressions.push_back(re);
+		}
+		for (auto pattern : level["skip_patterns"]) {
+			RegexExpression re;
+			re["expression"] = pattern.as<string>();
+			re["expression"] = escape_json_string(re["expression"]);
+			re["expression_type"] = "4";
+			re["case_sensitive"] = case_sensitive;
+			zr.expressions.push_back(re);
+		}
+		zlfm.levels.push_back(make_pair(priority, zr));
+	}
+
+	return zlfm;
+}
+
+int createLogFileMntr(ZabbixHost zh, ZabbixLogFileMntr zlfm, ZabbixContext& zcontext) {
+	// return 0 if overwrite sucessfully, otherwise return 1 if overwrite failed
+	string log_file = zcontext.common_cfg["log_file"];
+	string regex_name = zh.host_name + "_" + replaceSlashes(zlfm.log_file_path) + "_" + md5Last8(zlfm.log_file_path);
+
+	vector<ZabbixRegex> current_vzr = getRegexp(zcontext, regex_name);
+	if (current_vzr.size() > 0) {
+		cout << "The requested log file has been registered monitoring before." << endl
+		     << "So that binance_util won't create any new monitoring setting for it." << endl;
+		return 1;
+	}
+	// for (ZabbixRegex zr : current_vzr) {
+	// 	deleteRegexp(zr, zcontext);
+	// }
+
+	string regex_format = DEFAULT_REGEX_FORMAT;
+	if (zcontext.common_cfg.find("regex_format") != zcontext.common_cfg.end()) {
+		regex_format = zcontext.common_cfg.at("regex_format");
+	}
+	if (!zlfm.regex_format.empty()) regex_format = zlfm.regex_format;
+
+	for (auto level : zlfm.levels) {
+		int priority = level.first;
+
+		// Create global regular expression for log monitoring
+		ZabbixRegex zr = level.second;
+		zr.name = zh.host_name + "_" + zr.name;
+		for (RegexExpression& re : zr.expressions) {
+			re["expression"] = fmt::format(regex_format, re["expression"]);
+		}
+		if (createRegexp(zr, zcontext) == -1) {
+			throw std::logic_error("Failed create global regex " + zr.name + "\n");
+		}
+
+		// Create item for log monitoring
+		ZabbixItem zi = ZabbixItem(zr.name);
+		zi.item_conf["type"] = "7";
+		zi.item_conf["delay"] = zlfm.cycle_check;
+		zi.item_conf["status"] = "0";
+		zi.item_conf["value_type"] = "2";
+		string log_item_key = DEFAULT_LOG_ITEM_KEY;
+		if (zcontext.common_cfg.find("log_item_key") != zcontext.common_cfg.end()) {
+		    log_item_key = zcontext.common_cfg.at("log_item_key");
+	    }
+	    if (!zlfm.log_item_key.empty()) log_item_key = zlfm.log_item_key;
+		zi.item_conf["key_"] = fmt::format(log_item_key, zlfm.log_file_path, zr.name);
+		if (createItem(zi, stoi(zh.host_id), stoi(zi.item_conf["type"]), zcontext) == -1) {
+			throw std::logic_error("Failed create item " + zi.name + "\n");
+		}
+
+		// Create trigger for log monitoring
+	}
+
+	return 0;
 }

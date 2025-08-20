@@ -61,9 +61,11 @@ void handle_test(string zone_name, string test_funct, bool list_mode) {
             fail_funct_list.push_back(test_funct_name);
         }
     }
-    cout << "List of failed functions:" << endl;
-    for (string fail_funct : fail_funct_list) {
-        cout << "    " << fail_funct << endl;
+    if (fail_funct_list.size() > 0) {
+        cout << "List of failed functions:" << endl;
+        for (string fail_funct : fail_funct_list) {
+            cout << "    " << fail_funct << endl;
+        }
     }
 }
 
@@ -189,6 +191,65 @@ void handle_update_mntr_conf(string zone_name, const string& update_file,
 	}
 }
 
+void handle_log_mntr(string zone_name, const string& action,
+                     const string& log_mntr_file,
+                     const string& host_list_file="",
+                     const string& hostname="", const string& ip="") {
+    ZabbixContext zc = findZC(zcvector, zone_name);
+	userLogin(zc);
+	
+	vector<ZabbixHost> zhv;
+    if (!hostname.empty()) {
+    	ZabbixHost zh = ZabbixHost(hostname);
+        zh.host_conf["ip"] = ip;
+        zhv.push_back(zh);
+	}
+     
+    if (!host_list_file.empty()) {
+    	zhv = parseHostList(host_list_file);
+	}
+
+    // Validate host or host list
+    cout << "Validate host list..." << endl;
+    vector<ZabbixHost> valid_zhv;
+    try {
+        valid_zhv = validateHostList(zhv, zc);
+    } catch (const std::exception& e) {
+        cerr << e.what() << "Please check your host list again" << endl;
+        return;
+    }
+    cout << "OK" << endl;
+
+    ZabbixLogFileMntr zlfm = ZabbixLogFileMntr("NA");
+    try {
+        zlfm = parseLogFileMntrYaml(log_mntr_file);
+    } catch (const std::exception& e) {
+        cerr << e.what() << endl;
+        return;
+    }
+
+    if (action == "create") {
+        for (ZabbixHost zh : valid_zhv) {
+            cout << "Start create mew monitoring setting for log file"
+                 << zlfm.log_file_path << " of server "
+                 << zh.host_name << "..." << endl;
+            if (createLogFileMntr(zh, zlfm, zc) == 1) {
+                cout << "FAILED" << endl;
+            } else {
+                cout << "SUCCESS" << endl;
+            }
+        }
+    } else if (action == "overwrite_patterns") {
+        cout << "TODO" << endl;
+    } else if (action == "add_patterns") {
+        cout << "TODO" << endl;
+    } else if (action == "remove_patterns") {
+        cout << "TODO" << endl;
+    } else if (action == "replace_patterns") {
+        cout << "TODO" << endl;
+    }
+}
+
 int main(int argc, char** argv) {
     DEFAULT_CFG_FILE = getExecutableDirectory() + "\\" + DEFAULT_CFG_FILE;
     try {
@@ -232,7 +293,7 @@ int main(int argc, char** argv) {
     });
     create_template_cmd -> footer("E.x: zabbix-util create_template PSKRW1 default_template.txt");
 
-    // === modify_metric ===
+    // === update_mntr_cfg ===
     string update_file, update_hostlist, update_hostname, ip_addr;
     auto update_mntr_conf_cmd = app.add_subcommand("update_mntr_cfg", "Update monitoring config from input file");
     update_mntr_conf_cmd->add_option("<zone_name>", zone_name, "Monitoring zone name")
@@ -258,8 +319,49 @@ int main(int argc, char** argv) {
         handle_update_mntr_conf(zone_name, update_file, update_hostlist, update_hostname, ip_addr);
     });
     update_mntr_conf_cmd -> footer("E.x:\n"
-	                               "  zabbix-util update_mntr_cfg -l host_list01.txt PSKRW1 modify01.txt\n"
-	                               "  zabbix-util update_mntr_cfg --host server01 --ip 127.0.0.1 PSKRW1 modify01.txt\n");
+	                               "  zabbix-util update_mntr_cfg -l host_list01.txt PSKRW1 modify01.yaml\n"
+	                               "  zabbix-util update_mntr_cfg --host server01 --ip 127.0.0.1 PSKRW1 modify01.yaml\n");
+
+    // === log_mntr ===
+    string log_mntr_file, action;
+    set<string> action_set = {"create", "overwrite_patterns", "add_patterns",
+                              "remove_patterns", "replace_patterns"};
+    auto log_mntr_cmd = app.add_subcommand("log_mntr", "Update log file monitoring from input file");
+    log_mntr_cmd->add_option("<zone_name>", zone_name, "Monitoring zone name")
+        ->required() ->type_name("");
+    log_mntr_cmd->add_option("<action>", action, "Supported action:\n"
+                                                 "  create: create new log montioring setting\n"
+                                                 "  overwrite_patterns: overwrite old log montioring patterns\n"
+                                                 "  add_patterns: add new patterns to current log monitoring setting\n"
+                                                 "  remove_patterns: remove sepcified existing patterns\n"
+                                                 "  replace_patterns: replace patterns")
+        ->required() ->type_name("");
+    log_mntr_cmd->add_option("<log_mntr_file>", log_mntr_file, "Input file path")
+        ->required() ->type_name("");
+    log_mntr_cmd->add_option("-l", update_hostlist, "Host list file path") ->type_name("");
+    log_mntr_cmd->add_option("--host", update_hostname, "Single hostname") ->type_name("");
+    log_mntr_cmd->add_option("--ip", ip_addr, "IP address of host determined in --host") ->type_name("");
+
+    log_mntr_cmd->callback([&]() {
+        if (!update_hostname.empty() && !update_hostlist.empty()) {
+            throw CLI::RequiredError("Only one option is used in this case, --host or -l\nThey are not allowed to exist at the same time.");
+        }
+        if (update_hostname.empty() && update_hostlist.empty()) {
+        	throw CLI::RequiredError("--host or -l must be provided");
+		}
+		if (!update_hostname.empty()) {
+			if (ip_addr.empty()) {
+				throw CLI::RequiredError("If option --host is used, option --ip must be provided");
+			}
+		}
+        if (action_set.find(action) == action_set.end()) {
+            throw CLI::ValidationError("Entered action value is not supported");
+        }
+        handle_log_mntr(zone_name, action, log_mntr_file, update_hostlist, update_hostname, ip_addr);
+    });
+    log_mntr_cmd -> footer("E.x:\n"
+	                       "  zabbix-util log_mntr -l host_list01.txt PSKRW1 add_patterns log_mntr.yaml\n"
+	                       "  zabbix-util log_mntr --host server01 --ip 10.1.1.1 PSKRW1 overwrite log_mntr.yaml\n");
 
     CLI11_PARSE(app, argc, argv);
     return 0;

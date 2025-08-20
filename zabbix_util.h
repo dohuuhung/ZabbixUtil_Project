@@ -1,6 +1,7 @@
 #ifndef ZABBIX_UTIL_H
 #define ZABBIX_UTIL_H
 
+#include "md5.h"
 #include <yaml-cpp/yaml.h>
 #include "json.hpp"
 #include <array>
@@ -20,6 +21,7 @@ extern const unordered_map<string, int> ZTRIGGER_VALUE_TYPE_MAP;
 
 unordered_map<string, string> parseJsonPair(const YAML::Node& jp);
 string getEpochTimeString();
+bool check_exist_yaml_key(YAML::Node& root, vector<pair<int, string>>& keys, string yaml_file="");
 
 YAML::Node loadYamlFile(const string& file_path);
 
@@ -132,9 +134,15 @@ pair<int, string> getHostGroup(string group_name, ZabbixContext& zcontext);
 // API hostgroup.create
 int createHostGroup(string group_name, ZabbixContext& zcontext);
 
+// API host.create
+int createHost(ZabbixHost zh, ZabbixContext& zcontext);
+
 // API host.get
 vector<ZabbixHost> getHost(string host_name, ZabbixContext& zcontext);
 ZabbixHost findHost(string host_name, string ip_addr, ZabbixContext& zcontext);
+
+// API host.delete
+int deleteHost(ZabbixHost zh, ZabbixContext& zcontext);
 
 // API template.create
 int createTemplate(string tempplate_name, ZabbixContext& zcontext);
@@ -183,9 +191,23 @@ int createRegexp(ZabbixRegex zr, ZabbixContext& zcontext);
 int deleteRegexp(ZabbixRegex zr, ZabbixContext& zcontext);
 
 // API regexp.get
-ZabbixRegex getRegexp(ZabbixContext& zcontext, string name="");
+vector<ZabbixRegex> getRegexp(ZabbixContext& zcontext, string name="");
 
 // API regexp.update
 int updateRegexp(ZabbixRegex update_zr, ZabbixContext& zcontext);
+
+class ZabbixLogFileMntr{
+	public:
+		string log_file_path;
+		string event_name;
+		string regex_format;
+		string log_item_key;
+		string cycle_check;
+		vector<pair<int, ZabbixRegex>> levels;
+
+		ZabbixLogFileMntr(string lfp);
+};
+ZabbixLogFileMntr parseLogFileMntrYaml(string log_file_mntr_yaml);
+int createLogFileMntr(ZabbixHost zh, ZabbixLogFileMntr zlfm, ZabbixContext& zcontext);
 
 #endif

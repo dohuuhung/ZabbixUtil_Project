@@ -87,3 +87,4 @@ agent.version
 zabbix.stats
 icmppingloss
 vm.memory.utilization
+zabbix

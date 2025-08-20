@@ -28,7 +28,7 @@ items:
     delay: 60s                   # delay value is interval time of collecting data from target device
     status: 0                    # 0(default): enable item, 1: disable item
     value_type: 0
-  - name: cpu_all_util_usage
+  - name: cpu_all_usage
     key_: system.cpu.util
     type: 7
     delay: 60s                   # delay value is interval time of collecting data from target device
@@ -46,8 +46,39 @@ items:
     delay: 60s                   # delay value is interval time of collecting data from target device
     status: 0                    # 0(default): enable item, 1: disable item
     value_type: 0
+  - name: check_ntp_timegap
+    key_: system.localtime
+    type: 7
+    delay: 60s                   # delay value is interval time of collecting data from target device
+    status: 0                    # 0(default): enable item, 1: disable item
+    value_type: 0
+  - name: check_sys_cnt
+    key_: system.run[netstat -ano | grep SYN_SENT | wc -l]
+    type: 7
+    delay: 60s                   # delay value is interval time of collecting data from target device
+    status: 0                    # 0(default): enable item, 1: disable item
+    value_type: 0
+  - name: check_uptime
+    key_: system.uptime
+    type: 7
+    delay: 60s                   # delay value is interval time of collecting data from target device
+    status: 0                    # 0(default): enable item, 1: disable item
+    value_type: 0
+  - name: check_agent_available
+    key_: zabbix[host,agent,available]
+    type: 7
+    delay: 60s                   # delay value is interval time of collecting data from target device
+    status: 0                    # 0(default): enable item, 1: disable item
+    value_type: 0
 
 events:
+  - description: Check icmp ping
+    event_name: check_icmp_ping
+    triggers:
+      - expression: last(/{0}/icmppingloss[,3,1000,32,2000])=100
+        priority: 4                # 0: not classified, 1: information, 2: warning, 3: average, 4: high, 5: disaster
+        status: 0                  # Whether the trigger is enabled or disabled. 0: enabled, 1: disabled.
+        type: 0                    # 0: (default) do not generate multiple events, 1: generate multiple events
 #  - description: Available memory is low
 #    event_name: MEM@check_mem_available
 #    triggers:
@@ -77,8 +108,8 @@ events:
         priority: 4
         status: 0
         type: 0
-  - description: CPU ALL system usage is High
-    event_name: CPU_ALL@check_sys_usage
+  - description: CPU ALL usage is High
+    event_name: CPU_ALL@check_cpu_usage
     triggers:
       - expression: min(/{0}/system.cpu.util,5m)>=80 and max(/{0}/system.cpu.util,5m)<90
         priority: 2                # 0: not classified, 1: information, 2: warning, 3: average, 4: high, 5: disaster
@@ -110,3 +141,35 @@ events:
         priority: 2
         status: 0
         type: 0
+  - description: Check NTP time gap
+    event_name: MXSC_NTP@check_ntp_timegap
+    triggers:
+      - expression: fuzzytime(/{0}/system.localtime,1)=0
+        priority: 2                # 0: not classified, 1: information, 2: warning, 3: average, 4: high, 5: disaster
+        status: 0                  # Whether the trigger is enabled or disabled. 0: enabled, 1: disabled.
+        type: 0                    # 0: (default) do not generate multiple events, 1: generate multiple events
+  - description: Check number of sockets with state SYN_SENT
+    event_name: MXSC_SOCKET@check_sys_cnt
+    triggers:
+      - expression: last(/{0}/system.run[netstat -ano | grep SYN_SENT | wc -l])>=100 and last(/{0}/system.run[netstat -ano | grep SYN_SENT | wc -l])<200
+        priority: 2                # 0: not classified, 1: information, 2: warning, 3: average, 4: high, 5: disaster
+        status: 0                  # Whether the trigger is enabled or disabled. 0: enabled, 1: disabled.
+        type: 0                    # 0: (default) do not generate multiple events, 1: generate multiple events
+      - expression: last(/{0}/system.run[netstat -ano | grep SYN_SENT | wc -l])>200
+        priority: 3
+        status: 0
+        type: 0
+  - description: Check uptime
+    event_name: UPTIME@check_uptime_latest
+    triggers:
+      - expression: last(/{0}/system.uptime)<600
+        priority: 4                # 0: not classified, 1: information, 2: warning, 3: average, 4: high, 5: disaster
+        status: 0                  # Whether the trigger is enabled or disabled. 0: enabled, 1: disabled.
+        type: 0                    # 0: (default) do not generate multiple events, 1: generate multiple events
+  - description: Check agent available
+    event_name: check_agent_available
+    triggers:
+      - expression: max(/{0}/zabbix[host,agent,available],3)=0
+        priority: 3                # 0: not classified, 1: information, 2: warning, 3: average, 4: high, 5: disaster
+        status: 0                  # Whether the trigger is enabled or disabled. 0: enabled, 1: disabled.
+        type: 0                    # 0: (default) do not generate multiple events, 1: generate multiple events
